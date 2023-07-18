@@ -60,12 +60,14 @@ body {
 
 .C-span {
   font-size: small;
+  margin-bottom: 0;
 }
 
 .D {
   display: flex;
   align-items: flex-start;
   flex-direction: column;
+  gap: 5px;
 }
 
 .D h1 {

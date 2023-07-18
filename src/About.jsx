@@ -50,7 +50,7 @@ export const About = () => {
             {" "}
             I'm an ex-civil engineer who is now a React web developer, I was
             born and raised in Rajasthan, <br /> where I’ve been so fortunate
-            and trying to do so many incredible ne things in web development.
+            and trying to do so many incredible new things in web development.
           </p>
           <p className="P">
             I love to solve problems and create user friendly web apps.
