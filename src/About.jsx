@@ -17,9 +17,9 @@ export const About = () => {
         <div className="E">
           <p className="P">
             {" "}
-            I'm an ex-civil engineer who is now a React web developer, I was
-            born and raised in Rajasthan, <br /> where I’ve been so fortunate
-            and trying to do so many incredible new things in web development.
+            I'm Vishal Soni, a passionate React web developer dedicated to{" "}
+            <br /> crafting imaginative applications and delivering joyful user
+            experiences.
           </p>
           <p className="P">
             I love to solve problems and create user friendly web apps.
