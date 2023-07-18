@@ -89,11 +89,27 @@ img {
   filter: grayscale(100%);
 }
 
+.P {
+  font-size: 13px;
+  text-align: left;
+}
+
+.link {
+  font-size: 13px;
+  text-decoration: none;
+  color: crimson;
+  margin-right: 1rem;
+}
+
 @media (max-width: 768px) {
   img {
     width: 300px;
     max-height: 400px;
   }
+  .D {
+    gap: 0.5rem;
+  }
+
   .D h1 {
     margin-left: 0rem;
     margin-bottom: 18%;
@@ -111,16 +127,4 @@ img {
   .C {
     gap: 0;
   }
-}
-
-.P {
-  font-size: 13px;
-  text-align: left;
-}
-
-.link {
-  font-size: 13px;
-  text-decoration: none;
-  color: crimson;
-  margin-right: 1rem;
 }
