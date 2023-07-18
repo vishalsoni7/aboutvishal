@@ -48,11 +48,13 @@ export const About = () => {
         <div>
           <p className="P">
             {" "}
-            I was born and raised in Rajasthan, and I’m now a web developer
-            based in Bhilwara <br /> where I’ve been so so fortunate to have
-            been able to work on so many incredible things.
+            I'm an ex-civil engineer who is now a React web developer, I was
+            born and raised in Rajasthan, <br /> where I’ve been so fortunate
+            and trying to do so many incredible new things in web development.
           </p>
-          <p className="P">I love to solve problems and learn new things.</p>
+          <p className="P">
+            I love to solve problems and create user friendly web apps.
+          </p>
         </div>
       </div>
       <span className="C-span">
