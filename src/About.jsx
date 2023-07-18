@@ -38,14 +38,14 @@ export const About = () => {
           <div className="D">
             {" "}
             <img src="me2.jpg" alt="vishal" className="me" />
-            <h1 className="h1-shadow">
+            <h1>
               {" "}
               <strong> — hi! </strong>{" "}
             </h1>
           </div>
         </div>
 
-        <div>
+        <div className="E">
           <p className="P">
             {" "}
             I'm an ex-civil engineer who is now a React web developer, I was

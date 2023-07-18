@@ -6,13 +6,7 @@ export const Home = () => {
       <div>
         <NavLink to="/">
           {" "}
-          <img
-            width="100"
-            height="100"
-            src="logo.svg"
-            alt="logo"
-            className="logo-img"
-          />{" "}
+          <img src="logo.svg" alt="logo" className="logo-img" />{" "}
         </NavLink>
         <div className="A">
           {" "}
