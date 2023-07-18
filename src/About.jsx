@@ -50,11 +50,31 @@ export const About = () => {
             {" "}
             I'm an ex-civil engineer who is now a React web developer, I was
             born and raised in Rajasthan, <br /> where I’ve been so fortunate
-            and trying to do so many incredible new things in web development.
+            and trying to do so many incredible ne things in web development.
           </p>
           <p className="P">
             I love to solve problems and create user friendly web apps.
           </p>
+          <p className="P"> Browse through my latest projects</p>{" "}
+          <div className="D">
+            {" "}
+            <a
+              className="link"
+              href="https://pixyverse.netlify.app/"
+              target="-blank"
+            >
+              {" "}
+              social-media-app pixyverse{" "}
+            </a>
+            <a
+              className="link"
+              href="https://jewellss.netlify.app/"
+              target="-blank"
+            >
+              {" "}
+              e-commerce-app jewels{" "}
+            </a>{" "}
+          </div>
         </div>
       </div>
       <span className="C-span">
