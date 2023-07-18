@@ -17,9 +17,10 @@ export const About = () => {
         <div className="E">
           <p className="P">
             {" "}
-            I'm Vishal Soni, a passionate React web developer dedicated to{" "}
-            <br /> crafting imaginative applications and delivering joyful user
-            experiences.
+            I'm an ex-civil engineer who made a career transition to become{" "}
+            <br /> a passionate React web developer. I was born and raised in
+            Rajasthan and have been <br /> fortunate to embark on an exciting
+            journey of exploring various aspects of web development.
           </p>
           <p className="P">
             I love to solve problems and create user friendly web apps.
@@ -33,7 +34,7 @@ export const About = () => {
               target="-blank"
             >
               {" "}
-              social-media-app pixyverse{" "}
+              pixyverse a social-media-app
             </a>
             <a
               className="link"
@@ -41,7 +42,7 @@ export const About = () => {
               target="-blank"
             >
               {" "}
-              e-commerce-app jewels{" "}
+              jewels a e-commerce-app
             </a>{" "}
           </div>
         </div>

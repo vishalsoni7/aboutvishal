@@ -71,11 +71,11 @@ body {
 
 .D h1 {
   position: absolute;
-  margin-left: 29%;
-  margin-top: 4rem;
+  margin-left: 28.5%;
+  margin-top: 4.5rem;
   color: black;
   font-weight: bold;
-  font-size: 43px;
+  font-size: 45px;
 }
 
 .E {
@@ -87,16 +87,16 @@ img {
   max-height: 500px;
   object-fit: cover;
   -webkit-filter: grayscale(100%);
-  filter: grayscale(100%);
+  filter: grayscale(90%);
 }
 
 .P {
-  font-size: 13px;
+  font-size: 14px;
   text-align: left;
 }
 
 .link {
-  font-size: 13px;
+  font-size: 14px;
   text-decoration: none;
   color: crimson;
   margin-right: 1rem;
