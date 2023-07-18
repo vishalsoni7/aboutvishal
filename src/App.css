@@ -60,7 +60,7 @@ body {
 
 .C-span {
   font-size: small;
-  margin-bottom: 0;
+  margin-top: 1rem;
 }
 
 .D {
@@ -73,7 +73,7 @@ body {
 .D h1 {
   position: absolute;
   margin-left: 29%;
-  margin-bottom: 18%;
+  margin-top: 4rem;
   color: black;
   font-weight: bold;
   font-size: 43px;

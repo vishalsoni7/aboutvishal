@@ -78,7 +78,6 @@ export const About = () => {
         </div>
       </div>
       <span className="C-span">
-        {" "}
         <i>All work © Vishal Soni </i>{" "}
       </span>
     </div>
