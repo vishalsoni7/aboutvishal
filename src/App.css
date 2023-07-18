@@ -53,6 +53,7 @@ body {
   justify-content: center;
   gap: 2rem;
   margin-top: 50px;
+  flex-wrap: wrap;
 }
 
 .C-span {
