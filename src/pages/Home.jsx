@@ -5,9 +5,8 @@ export const Home = () => {
         <div className="B">
           {" "}
           <h1>
-            —Hello, I'm Vishal Soni, a passionate React <br /> web developer
-            dedicated to crafting imaginative <br /> applications and delivering
-            joyful user experiences.
+            — Hi, I'm Vishal Soni, a React <br /> Web Developer, who loves to
+            develop <br /> imaginative apps and joyful experiences.
           </h1>
           <span>
             {" "}
