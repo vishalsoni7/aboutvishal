@@ -9,7 +9,7 @@ export const About = () => {
             <img src="me2.jpg" alt="vishal" className="me" />
             <h1>
               {" "}
-              <strong> — hi! </strong>{" "}
+              <strong> —hi! </strong>{" "}
             </h1>
           </div>
         </div>
@@ -17,15 +17,15 @@ export const About = () => {
         <div className="E">
           <p className="P">
             {" "}
-            I'm an ex-civil engineer who made a career transition to become{" "}
-            <br /> a passionate React web developer. I was born and raised in
-            Rajasthan and have been <br /> fortunate to embark on an exciting
+            I'm an ex-civil engineer who made a career transition to become a
+            passionate <br /> React web developer. I was born and raised in
+            Rajasthan and have been fortunate <br /> to embark on an exciting
             journey of exploring various aspects of web development.
           </p>
           <p className="P">
             I love to solve problems and create user friendly web apps.
           </p>
-          <p className="P"> Browse through my latest projects</p>{" "}
+          <p className="P"> Browse through my latest projects,</p>{" "}
           <div className="D">
             {" "}
             <a
@@ -34,7 +34,7 @@ export const About = () => {
               target="-blank"
             >
               {" "}
-              pixyverse a social-media-app
+              pixyverse <span className="link-span"> a social-media-app.</span>
             </a>
             <a
               className="link"
@@ -42,7 +42,7 @@ export const About = () => {
               target="-blank"
             >
               {" "}
-              jewels a e-commerce-app
+              jewels <span className="link-span">a e-commerce-app.</span>
             </a>{" "}
           </div>
         </div>
