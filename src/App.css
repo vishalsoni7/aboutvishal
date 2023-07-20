@@ -1,11 +1,12 @@
 .App {
   text-align: center;
-  font-family: "Ysabeau SC", sans-serif;
+  font-family: Helvetica, Arial, sans-serif;
 }
 
 body {
   color: #333;
   background-color: whitesmoke;
+  font-family: Helvetica, Arial, sans-serif;
 }
 
 .logo-img {
@@ -42,6 +43,7 @@ body {
   font-size: 43px;
   color: #222;
   word-spacing: 5px;
+  font-weight: 450;
 }
 .B span {
   font-size: small;
@@ -72,7 +74,7 @@ body {
 .D h1 {
   position: absolute;
   margin-left: 29.5%;
-  margin-top: 4.5rem;
+  margin-top: 6rem;
   color: black;
   font-weight: bold;
   font-size: 45px;
@@ -108,7 +110,7 @@ img {
 
 @media (max-width: 768px) {
   img {
-    width: 300px;
+    width: 330px;
     max-height: 400px;
   }
   .D {
@@ -116,17 +118,18 @@ img {
   }
 
   .D h1 {
-    margin-left: 0rem;
-    margin-bottom: 18%;
+    margin-left: 1%;
+    margin-top: 22.5rem;
     color: white;
+    font-size: 32px;
   }
 
   .E {
-    padding: 15px 25px;
+    padding: 15px 10px;
   }
 
   .B h1 {
-    font-size: 16px;
+    font-size: 32px;
   }
 
   .C {
