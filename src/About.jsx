@@ -6,7 +6,7 @@ export const About = () => {
           {" "}
           <div className="D">
             {" "}
-            <img src="me2.jpg" alt="vishal" className="me" />
+            <img src="me1.jpg" alt="vishal" className="me" />
             <h1>
               {" "}
               <strong> —hi! </strong>{" "}
