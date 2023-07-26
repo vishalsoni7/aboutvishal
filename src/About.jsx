@@ -38,7 +38,7 @@ export const About = () => {
             </a>
             <a
               className="link"
-              href="https://jewellss.netlify.app/"
+              href="https://jewells.netlify.app/"
               target="-blank"
             >
               {" "}
