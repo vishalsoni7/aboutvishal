@@ -13,7 +13,6 @@ export const About = () => {
             </h1>
           </div>
         </div>
-
         <div className="E">
           <p className="P">
             {" "}
@@ -45,8 +44,8 @@ export const About = () => {
               jewels <span className="link-span">a e-commerce-app.</span>
             </a>{" "}
           </div>
-        </div>
-      </div>
+        </div>{" "}
+      </div>{" "}
       <span className="C-span">
         <i>All work © Vishal Soni </i>{" "}
       </span>
