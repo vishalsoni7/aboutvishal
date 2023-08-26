@@ -26,6 +26,7 @@ body {
   justify-content: center;
   gap: 3rem;
   font-size: small;
+  letter-spacing: 1px;
 }
 
 .B {
@@ -73,7 +74,7 @@ body {
 .D h1 {
   position: absolute;
   margin-left: 29.5%;
-  margin-top: 4.5rem;
+  margin-top: 7rem;
   color: #252525;
   font-weight: bold;
   font-size: 45px;
@@ -87,7 +88,7 @@ img {
   width: 500px;
   max-height: 500px;
   object-fit: cover;
-  -webkit-filter: grayscale(100%);
+  -webkit-filter: grayscale(0%);
   filter: grayscale(100%);
 }
 
