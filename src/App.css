@@ -88,6 +88,7 @@ img {
   width: 500px;
   max-height: 500px;
   object-fit: cover;
+  border-radius: 2px;
   -webkit-filter: grayscale(0%);
   filter: grayscale(100%);
 }
@@ -103,6 +104,12 @@ img {
   color: crimson;
   margin-right: 1rem;
 }
+
+/* .hover-project:hover {
+  transition: 0.2s;
+  border-bottom: 1px solid crimson;
+  border-style: dotted;
+} */
 
 .link-span {
   color: #333;

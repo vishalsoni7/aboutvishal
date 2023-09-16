@@ -10,7 +10,7 @@ export const About = () => {
               target="-blank"
             >
               <img
-                src="me1.jpg"
+                src="me5.jpg"
                 alt="vishal"
                 title="Linkedin"
                 className="linkedin"
@@ -35,14 +35,14 @@ export const About = () => {
           <p className="P"> Browse through my latest projects,</p>
           <div className="D">
             <a
-              className="link"
+              className="link hover-project"
               href="https://pixyverse.netlify.app/"
               target="-blank"
             >
               pixyverse <span className="link-span"> a social-media-app.</span>
             </a>
             <a
-              className="link"
+              className="link hover-project"
               href="https://jewells.netlify.app/"
               target="-blank"
             >
