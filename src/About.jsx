@@ -1,4 +1,7 @@
+import { useNavigate } from "react-router";
+
 export const About = () => {
+  const navigate = useNavigate();
   return (
     <div>
       <div className="C">
@@ -34,20 +37,13 @@ export const About = () => {
           </p>
           <p className="P"> Browse through my latest projects,</p>
           <div className="D">
-            <a
-              className="link hover-project"
-              href="https://pixyverse.netlify.app/"
-              target="-blank"
+            <span
+              className="link loading-dots"
+              onClick={() => navigate("/projects")}
             >
-              pixyverse <span className="link-span"> a social-media-app.</span>
-            </a>
-            <a
-              className="link hover-project"
-              href="https://jewells.netlify.app/"
-              target="-blank"
-            >
-              jewels <span className="link-span">a e-commerce-app.</span>
-            </a>
+              {" "}
+              projects...
+            </span>
           </div>
         </div>
       </div>

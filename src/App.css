@@ -90,7 +90,13 @@ img {
   object-fit: cover;
   border-radius: 2px;
   -webkit-filter: grayscale(0%);
-  filter: grayscale(100%);
+  filter: grayscale(200%);
+  transition: filter 250ms;
+}
+
+img:hover,
+:focus {
+  filter: grayscale(0%);
 }
 
 .P {
@@ -103,17 +109,38 @@ img {
   text-decoration: none;
   color: crimson;
   margin-right: 1rem;
+  cursor: pointer;
 }
-
-/* .hover-project:hover {
-  transition: 0.2s;
-  border-bottom: 1px solid crimson;
-  border-style: dotted;
-} */
 
 .link-span {
   color: #333;
   text-decoration: none;
+}
+
+.loading-dots {
+  display: inline-block;
+}
+
+.projects {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.projects h3 {
+  text-align: left;
+  margin-left: 1.3rem;
+}
+
+.projects li {
+  margin: 0.5rem 0;
+  text-align: left;
+}
+
+.projects a {
+  color: crimson;
+  cursor: pointer;
 }
 
 @media (max-width: 768px) {
