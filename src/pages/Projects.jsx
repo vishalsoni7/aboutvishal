@@ -11,7 +11,7 @@ export const Projects = () => {
             </a>
           </li>
           <li>
-            Social Media:
+            Social Media:{" "}
             <a href="https://pixyverse.netlify.app/" target="-blank">
               pixyverse.netlify.app
             </a>
@@ -30,7 +30,7 @@ export const Projects = () => {
             </a>
           </li>
           <li>
-            Habit Tracking Web App (simple habit tracker):
+            Habit Tracking Web App (simple habit tracker):{" "}
             <a href="https://mcr-two.netlify.app/" target="-blank">
               mcr-two.netlify.app{" "}
             </a>
@@ -38,7 +38,7 @@ export const Projects = () => {
           <li>
             Shoe E-Commerce App:{" "}
             <a href="https://thinsil-e-commerce.netlify.app/" target="-blank">
-              thinsil-e-commerce.netlify.app
+              e-commerce.netlify.app
             </a>
           </li>
           <li>
@@ -49,7 +49,7 @@ export const Projects = () => {
             </a>
           </li>
           <li>
-            Health Tracking App (Full stack):
+            Health Tracking App (Full stack):{" "}
             <a href="https://healthtracking.netlify.app/" target="-blank">
               {" "}
               healthtracking.netlify.app{" "}

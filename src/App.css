@@ -110,6 +110,7 @@ img:hover,
   color: crimson;
   margin-right: 1rem;
   cursor: pointer;
+  letter-spacing: 1px;
 }
 
 .link-span {

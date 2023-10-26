@@ -37,12 +37,9 @@ export const About = () => {
           </p>
           <p className="P"> Browse through my latest projects,</p>
           <div className="D">
-            <span
-              className="link loading-dots"
-              onClick={() => navigate("/projects")}
-            >
+            <span className="link" onClick={() => navigate("/projects")}>
               {" "}
-              projects...
+              work⤼
             </span>
           </div>
         </div>
