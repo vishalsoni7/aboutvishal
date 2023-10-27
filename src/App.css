@@ -123,6 +123,7 @@ img:hover,
 }
 
 .projects {
+  font-size: 14px;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -131,7 +132,7 @@ img:hover,
 
 .projects h3 {
   text-align: left;
-  margin-left: 1.3rem;
+  margin-left: 1.5rem;
 }
 
 .projects li {
