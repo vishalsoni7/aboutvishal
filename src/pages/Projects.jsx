@@ -42,21 +42,58 @@ export const Projects = () => {
             </a>
           </li>
           <li>
-            Task Management (Full stack):{" "}
+            Task Management (Full-Stack):{" "}
             <a href="https://liaisonit.netlify.app/" target="-blank">
               {" "}
               liaisonit.netlify.app{" "}
             </a>
           </li>
           <li>
-            Health Tracking App (Full stack):{" "}
+            Health Tracking App (Full-Stack):{" "}
             <a href="https://healthtracking.netlify.app/" target="-blank">
               {" "}
               healthtracking.netlify.app{" "}
             </a>
           </li>
+          <li>
+            Component Library:
+            <a href="https://csscomponentslibrary.netlify.app/" target="-blank">
+              {" "}
+              csscomponentslibrary.netlify.app{" "}
+            </a>
+          </li>
         </ol>
       </div>
+      {/* <div className="icons">
+        <a
+          href="https://github.com/vishalsoni7"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <i className="fa-brands fa-github font_awsome_logo" />
+        </a>
+        <a
+          href="https://www.linkedin.com/in/vishal-soni-b21a4a1b8"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <i className="fa-brands fa-linkedin font_awsome_logo" />
+        </a>
+        <a
+          href="https://www.instagram.com/vishaallsoni/"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <i className="fa-brands fa-instagram font_awsome_logo" />
+        </a>
+        <a
+          href="https://twitter.com/Vishsoni7"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <i className="fa-brands fa-twitter font_awsome_logo" />
+        </a>
+      </div> */}
     </div>
   );
 };

@@ -6,6 +6,7 @@ body {
   color: #333;
   background-color: whitesmoke;
   font-family: Helvetica, Arial, sans-serif;
+  height: 100vh;
 }
 
 .logo-img {
@@ -15,11 +16,6 @@ body {
   height: 100px;
 }
 
-.NavLink {
-  text-decoration: none;
-  color: #333;
-}
-
 .A {
   display: flex;
   align-items: center;
@@ -27,6 +23,10 @@ body {
   gap: 3rem;
   font-size: small;
   letter-spacing: 1px;
+}
+
+.A span {
+  cursor: pointer;
 }
 
 .B {
@@ -41,10 +41,10 @@ body {
   text-align: center;
   white-space: pre-wrap;
   font-size: 43px;
-  color: #222;
   word-spacing: 5px;
   font-weight: 450;
 }
+
 .B span {
   font-size: small;
   margin-top: 2rem;
@@ -113,16 +113,8 @@ img:hover,
   letter-spacing: 1px;
 }
 
-.link-span {
-  color: #333;
-  text-decoration: none;
-}
-
-.loading-dots {
-  display: inline-block;
-}
-
 .projects {
+  width: max-content;
   font-size: 14px;
   position: absolute;
   top: 50%;
@@ -143,6 +135,25 @@ img:hover,
 .projects a {
   color: crimson;
   cursor: pointer;
+}
+
+.icons {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  margin: 1rem 0 0.5rem 0;
+  gap: 0.5rem;
+}
+
+.icons a {
+  font-size: larger;
+  color: #333;
+}
+
+.icons a:hover,
+:active {
+  /* color: crimson; */
+  transition: 250ms;
 }
 
 @media (max-width: 768px) {
@@ -173,5 +184,17 @@ img:hover,
   .C {
     gap: 0;
     margin-top: 20px;
+  }
+
+  .projects {
+    font-size: 11.5px;
+  }
+
+  .projects h3 {
+    margin-left: 1.6rem;
+  }
+
+  .projects ol {
+    margin: 0;
   }
 }

@@ -7,19 +7,7 @@ export const About = () => {
       <div className="C">
         <div>
           <div className="D">
-            <a
-              className="link"
-              href="https://www.linkedin.com/in/vishal-soni-b21a4a1b8"
-              target="-blank"
-            >
-              <img
-                src="me5.jpg"
-                alt="vishal"
-                title="Linkedin"
-                className="linkedin"
-              />
-            </a>
-
+            <img src="me5.jpg" alt="vishal" title="Me" className="linkedin" />
             <h1>
               <strong> —hi! </strong>
             </h1>
@@ -46,15 +34,8 @@ export const About = () => {
       </div>
 
       <span className="C-span">
-        <a
-          href="https://www.linkedin.com/in/vishal-soni-b21a4a1b8"
-          target="-blank"
-          title="linkedin"
-          className="link-span"
-        >
-          {" "}
-          <i>All work © Vishal Soni </i>{" "}
-        </a>
+        {" "}
+        <i>All work © Vishal Soni </i>{" "}
       </span>
     </div>
   );

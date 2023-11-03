@@ -1,27 +1,12 @@
-import { NavLink } from "react-router-dom/dist";
+import { useNavigate } from "react-router-dom/dist";
 export const Header = () => {
+  const navigate = useNavigate();
   return (
     <div>
-      <NavLink to="/">
-        <img
-          width="100"
-          height="100"
-          src="logo.svg"
-          alt="logo"
-          className="logo-img"
-        />{" "}
-      </NavLink>
+      <img src="logo.svg" alt="logo" className="logo-img" />
       <div className="A">
-        <span>
-          <NavLink className="NavLink" to="/">
-            HOME{" "}
-          </NavLink>{" "}
-        </span>
-        <span>
-          <NavLink className="NavLink" to="/about">
-            ABOUT{" "}
-          </NavLink>
-        </span>{" "}
+        <span onClick={() => navigate("/")}>HOME</span>
+        <span onClick={() => navigate("/about")}>ABOUT </span>
       </div>
     </div>
   );
