@@ -17,6 +17,19 @@ export const Projects = () => {
             </a>
           </li>
           <li>
+            Shoe E-Commerce App:{" "}
+            <a href="https://thinsil-e-commerce.netlify.app/" target="-blank">
+              e-commerce.netlify.app
+            </a>
+          </li>
+          <li>
+            Health Tracking App (full stack):{" "}
+            <a href="https://healthtracking.netlify.app/" target="-blank">
+              {" "}
+              healthtracking.netlify.app{" "}
+            </a>
+          </li>
+          <li>
             Movie Rating Web App (like IMDB):{" "}
             <a href="https://neogimdb.netlify.app/" target="-blank">
               {" "}
@@ -29,30 +42,17 @@ export const Projects = () => {
               mcr-nine.netlify.app{" "}
             </a>
           </li>
-          <li>
+          {/* <li>
             Habit Tracking Web App (simple habit tracker):{" "}
             <a href="https://mcr-two.netlify.app/" target="-blank">
               mcr-two.netlify.app{" "}
             </a>
-          </li>
-          <li>
-            Shoe E-Commerce App:{" "}
-            <a href="https://thinsil-e-commerce.netlify.app/" target="-blank">
-              e-commerce.netlify.app
-            </a>
-          </li>
+          </li> */}
           <li>
             Task Management (full stack):{" "}
             <a href="https://liaisonit.netlify.app/" target="-blank">
               {" "}
               liaisonit.netlify.app{" "}
-            </a>
-          </li>
-          <li>
-            Health Tracking App (full stack):{" "}
-            <a href="https://healthtracking.netlify.app/" target="-blank">
-              {" "}
-              healthtracking.netlify.app{" "}
             </a>
           </li>
           <li>
