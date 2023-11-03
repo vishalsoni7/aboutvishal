@@ -42,14 +42,14 @@ export const Projects = () => {
             </a>
           </li>
           <li>
-            Task Management (Full-Stack):{" "}
+            Task Management (full stack):{" "}
             <a href="https://liaisonit.netlify.app/" target="-blank">
               {" "}
               liaisonit.netlify.app{" "}
             </a>
           </li>
           <li>
-            Health Tracking App (Full-Stack):{" "}
+            Health Tracking App (full stack):{" "}
             <a href="https://healthtracking.netlify.app/" target="-blank">
               {" "}
               healthtracking.netlify.app{" "}
