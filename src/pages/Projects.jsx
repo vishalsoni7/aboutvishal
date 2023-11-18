@@ -1,7 +1,7 @@
 export const Projects = () => {
   return (
     <div className="projects">
-      <h3> All Projects </h3>
+      <h3> Frontend Projects </h3>
       <div>
         <ol>
           <li>
@@ -64,36 +64,72 @@ export const Projects = () => {
           </li>
         </ol>
       </div>
-      {/* <div className="icons">
-        <a
-          href="https://github.com/vishalsoni7"
-          target="_blank"
-          rel="noreferrer"
-        >
-          <i className="fa-brands fa-github font_awsome_logo" />
-        </a>
-        <a
-          href="https://www.linkedin.com/in/vishal-soni-b21a4a1b8"
-          target="_blank"
-          rel="noreferrer"
-        >
-          <i className="fa-brands fa-linkedin font_awsome_logo" />
-        </a>
-        <a
-          href="https://www.instagram.com/vishaallsoni/"
-          target="_blank"
-          rel="noreferrer"
-        >
-          <i className="fa-brands fa-instagram font_awsome_logo" />
-        </a>
-        <a
-          href="https://twitter.com/Vishsoni7"
-          target="_blank"
-          rel="noreferrer"
-        >
-          <i className="fa-brands fa-twitter font_awsome_logo" />
-        </a>
-      </div> */}
+
+      <h3> Backend Projects </h3>
+      <div>
+        <ol>
+          <li>
+            Restaurant API:{" "}
+            <a
+              href="https://documenter.getpostman.com/view/25125631/2s9YC8vqcn"
+              target="-blank"
+            >
+              restaurant{" "}
+            </a>
+          </li>
+          <li>
+            TripAdvisor API:{" "}
+            <a
+              href="https://documenter.getpostman.com/view/25125631/2s9YJW6mJr"
+              target="-blank"
+            >
+              tripadvisor
+            </a>
+          </li>
+          <li>
+            User/Movie API:{" "}
+            <a
+              href="https://documenter.getpostman.com/view/25125631/2s9YCBu9Mi"
+              target="-blank"
+            >
+              users
+            </a>
+          </li>
+        </ol>
+      </div>
     </div>
   );
 };
+
+{
+  /* <div className="icons">
+<a
+  href="https://github.com/vishalsoni7"
+  target="_blank"
+  rel="noreferrer"
+>
+  <i className="fa-brands fa-github font_awsome_logo" />
+</a>
+<a
+  href="https://www.linkedin.com/in/vishal-soni-b21a4a1b8"
+  target="_blank"
+  rel="noreferrer"
+>
+  <i className="fa-brands fa-linkedin font_awsome_logo" />
+</a>
+<a
+  href="https://www.instagram.com/vishaallsoni/"
+  target="_blank"
+  rel="noreferrer"
+>
+  <i className="fa-brands fa-instagram font_awsome_logo" />
+</a>
+<a
+  href="https://twitter.com/Vishsoni7"
+  target="_blank"
+  rel="noreferrer"
+>
+  <i className="fa-brands fa-twitter font_awsome_logo" />
+</a>
+</div> */
+}
