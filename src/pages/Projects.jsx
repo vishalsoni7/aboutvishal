@@ -42,12 +42,12 @@ export const Projects = () => {
               mcr-nine.netlify.app{" "}
             </a>
           </li>
-          {/* <li>
+          <li>
             Habit Tracking Web App (simple habit tracker):{" "}
             <a href="https://mcr-two.netlify.app/" target="-blank">
               mcr-two.netlify.app{" "}
             </a>
-          </li> */}
+          </li>
           <li>
             Task Management (full stack):{" "}
             <a href="https://liaisonit.netlify.app/" target="-blank">
