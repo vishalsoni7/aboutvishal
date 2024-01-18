@@ -6,8 +6,6 @@ body {
   color: #333;
   background-color: whitesmoke;
   font-family: Helvetica, Arial, sans-serif;
-  /* height: 100vh; */
-  overflow-y: hidden;
 }
 
 .logo-img {
