@@ -7,7 +7,7 @@ body {
   background-color: whitesmoke;
   font-family: Helvetica, Arial, sans-serif;
   height: 100vh;
-  overflow: hidden;
+  overflow-y: hidden;
 }
 
 .logo-img {
