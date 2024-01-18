@@ -135,6 +135,12 @@ img:hover,
 .projects a {
   color: crimson;
   cursor: pointer;
+  text-decoration: none;
+}
+
+.projects a:hover {
+  transition: 0.1s;
+  border-bottom: 0.5px solid;
 }
 
 .icons {

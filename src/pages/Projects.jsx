@@ -5,61 +5,58 @@ export const Projects = () => {
       <div>
         <ol>
           <li>
-            E-Commerce Web App:{" "}
+            E-Commerce Web App{" "}
             <a href="https://jewells.netlify.app/" target="-blank">
-              jewells.netlify.app{" "}
+              jewells.netlify.app
             </a>
           </li>
           <li>
-            Social Media:{" "}
+            Social Media{" "}
             <a href="https://pixyverse.netlify.app/" target="-blank">
               pixyverse.netlify.app
             </a>
           </li>
           <li>
-            Shoe E-Commerce App:{" "}
+            Shoe E-Commerce App{" "}
             <a href="https://thinsil-e-commerce.netlify.app/" target="-blank">
               e-commerce.netlify.app
             </a>
           </li>
           <li>
-            Health Tracking App (full stack):{" "}
+            Health Tracking App (full stack){" "}
             <a href="https://healthtracking.netlify.app/" target="-blank">
-              {" "}
-              healthtracking.netlify.app{" "}
+              healthtracking.netlify.app
             </a>
           </li>
           <li>
-            Movie Rating Web App (like IMDB):{" "}
+            CRUD App (full stack){" "}
+            <a href="https://dataplant.netlify.app/" target="-blank">
+              dataplant.netlify.app
+            </a>
+          </li>
+          <li>
+            AI Chatbot (full stack){" "}
+            <a href="https://ai-chatbot-drab.vercel.app/" target="-blank">
+              ai-chatbot.vercel.app
+            </a>
+          </li>
+          <li>
+            Movie Rating Web App (like IMDB){" "}
             <a href="https://neogimdb.netlify.app/" target="-blank">
-              {" "}
-              neogimdb.netlify.app{" "}
+              neogimdb.netlify.app
             </a>
           </li>
           <li>
-            Video Library Web App (like YouTube):{" "}
+            Video Library Web App (like YouTube){" "}
             <a href="https://mcr-nine.netlify.app/" target="-blank">
-              mcr-nine.netlify.app{" "}
+              mcr-nine.netlify.app
             </a>
           </li>
+
           <li>
-            Habit Tracking Web App (simple habit tracker):{" "}
-            <a href="https://mcr-two.netlify.app/" target="-blank">
-              mcr-two.netlify.app{" "}
-            </a>
-          </li>
-          <li>
-            Task Management (full stack):{" "}
-            <a href="https://liaisonit.netlify.app/" target="-blank">
-              {" "}
-              liaisonit.netlify.app{" "}
-            </a>
-          </li>
-          <li>
-            Component Library:
+            Component Library{" "}
             <a href="https://csscomponentslibrary.netlify.app/" target="-blank">
-              {" "}
-              csscomponentslibrary.netlify.app{" "}
+              csscomponentslibrary.netlify.app
             </a>
           </li>
         </ol>
@@ -69,16 +66,16 @@ export const Projects = () => {
       <div>
         <ol>
           <li>
-            Restaurant API:{" "}
+            Restaurant API{" "}
             <a
               href="https://documenter.getpostman.com/view/25125631/2s9YC8vqcn"
               target="-blank"
             >
-              restaurant{" "}
+              restaurant
             </a>
           </li>
           <li>
-            TripAdvisor API:{" "}
+            TripAdvisor API{" "}
             <a
               href="https://documenter.getpostman.com/view/25125631/2s9YJW6mJr"
               target="-blank"
@@ -87,7 +84,7 @@ export const Projects = () => {
             </a>
           </li>
           <li>
-            User/Movie API:{" "}
+            User/Movie API{" "}
             <a
               href="https://documenter.getpostman.com/view/25125631/2s9YCBu9Mi"
               target="-blank"
@@ -100,6 +97,15 @@ export const Projects = () => {
     </div>
   );
 };
+
+{
+  /* <li>
+Habit Tracking Web App (simple habit tracker):
+<a href="https://mcr-two.netlify.app/" target="-blank">
+  mcr-two.netlify.app
+</a>
+</li> */
+}
 
 {
   /* <div className="icons">
