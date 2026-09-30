@@ -11,6 +11,8 @@
   --slate: #6c8bb0;
 
   --cyan-wash: rgba(127, 216, 255, 0.08);
+  --cyan-wash-soft: rgba(127, 216, 255, 0.06);
+  --ghost-hover: rgba(127, 216, 255, 0.12);
   --grid-major: rgba(127, 216, 255, 0.09);
   --grid-minor: rgba(127, 216, 255, 0.04);
 

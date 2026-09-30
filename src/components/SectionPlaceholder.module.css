@@ -1,0 +1,48 @@
+.section {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  column-gap: var(--gap);
+  padding: 64px var(--pad-x);
+  border-top: 1px solid var(--line);
+}
+
+.text {
+  grid-column: span 4;
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.title {
+  font-size: 64px;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.panel {
+  grid-column: 5 / span 8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 560px;
+  border: 1px dashed var(--line);
+}
+
+.fig {
+  color: var(--cyan);
+}
+
+/* Deploy: panel in columns 1–8, text in 9–12 */
+.flipped .text {
+  grid-column: 9 / span 4;
+  grid-row: 1;
+}
+
+.flipped .panel {
+  grid-column: 1 / span 8;
+  grid-row: 1;
+}
+
+.flipped .fig {
+  color: var(--orange);
+}

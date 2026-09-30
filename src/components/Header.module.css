@@ -1,0 +1,43 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px var(--pad-x);
+  border-bottom: 1px solid var(--line);
+  font-size: 13px;
+}
+
+.brand {
+  color: var(--ink);
+  font-family: var(--font-display);
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-decoration: none;
+}
+
+.brand:hover {
+  color: var(--ink);
+}
+
+.sheet {
+  color: var(--muted);
+}
+
+.nav {
+  display: flex;
+  gap: 28px;
+  padding: 0;
+  list-style: none;
+}
+
+.link {
+  display: inline-block;
+  padding: 10px 0;
+  color: var(--ink);
+  text-decoration: none;
+}
+
+.link:hover {
+  color: var(--cyan);
+}

@@ -98,6 +98,76 @@ a:hover {
   outline-offset: 2px;
 }
 
+/* ---------- shared primitives ---------- */
+/* Buttons and chips repeat across sections, so they live here rather than in a module. */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 46px;
+  padding: 0 18px;
+  border: 1px solid transparent;
+  border-radius: 0;
+  font-weight: 600;
+  text-decoration: none;
+  transition:
+    background-color 0.15s,
+    color 0.15s;
+}
+
+.btn-primary {
+  background: var(--cyan);
+  color: var(--bg);
+}
+
+.btn-primary:hover {
+  background: var(--cyan-soft);
+  color: var(--bg);
+}
+
+.btn-ghost {
+  border-color: var(--cyan);
+  background: transparent;
+  color: var(--cyan);
+}
+
+.btn-ghost:hover {
+  background: var(--ghost-hover);
+  color: var(--cyan);
+}
+
+.chip {
+  padding: 4px 10px;
+  border: 1px solid var(--line);
+  color: var(--cyan);
+  font-family: var(--font-body);
+  font-size: 12px;
+}
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+/* Small mono caption above headings ("FIG. 01 — …", "[ SPEC ] …") */
+.label {
+  font-family: var(--font-body);
+  font-size: 13px;
+  font-weight: 400;
+  color: var(--muted);
+}
+
+.label-accent {
+  color: var(--cyan);
+}
+
+/* Page frame: 1440px sheet, 64px side padding (tokens adjust it on mobile) */
+.page {
+  max-width: var(--page-max);
+  margin: 0 auto;
+}
+
 /* ---------- utilities ---------- */
 .visually-hidden {
   position: absolute;

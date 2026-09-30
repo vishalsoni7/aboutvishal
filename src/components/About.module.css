@@ -1,0 +1,34 @@
+.section {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--gap);
+  padding: 64px var(--pad-x);
+  border-top: 1px solid var(--line);
+}
+
+.log {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.role {
+  font-size: 30px;
+}
+
+.dates {
+  color: var(--cyan);
+  font-size: 13px;
+}
+
+.summary {
+  color: var(--muted);
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+.materials {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
