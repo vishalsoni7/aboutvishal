@@ -1,4 +1,5 @@
-# Old portfolio (prebuilt from legacy/v1) lives under /v1. Keep these above the catch-all.
+# Old portfolio (prebuilt from legacy/v1) lives under /v1 and has its own client router.
+# There is no catch-all for the new site: it's one page with #anchors, so unknown URLs
+# get Netlify's real 404 status with public/404.html instead of a soft-404 homepage.
 /v1     /v1/index.html  200
 /v1/*   /v1/index.html  200
-/*      /index.html     200

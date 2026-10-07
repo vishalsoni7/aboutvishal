@@ -10,7 +10,8 @@ Personal portfolio for Vishal Soni, a frontend developer in Jaipur. It's a singl
 ## Stack
 - Vite + React 18 + TypeScript (strict), npm.
 - Styling: CSS variables in `src/styles/tokens.css`, global rules in `src/styles/global.css`, and one `*.module.css` per component. No Tailwind, no UI kit, no CSS-in-JS.
-- Fonts from Google Fonts: Chakra Petch (500, 700) for display and IBM Plex Mono (400, 600) for everything else.
+- Fonts: Chakra Petch (500, 700) for display and IBM Plex Mono (400, 600) for everything else. They're Google Fonts files self-hosted in `public/fonts/` (latin + latin-ext) via `src/styles/fonts.css`, with the two above-the-fold faces preloaded in `index.html`. Don't switch back to the fonts.googleapis.com stylesheet; it blocks rendering.
+- Prerendering: `npm run build` renders `<App />` into `dist/index.html` (the `prerender` plugin in `vite.config.ts` + `src/entry-server.tsx`) and `main.tsx` hydrates it. Components must render the same on the server and the first client pass: keep `window`/`document`/`navigator` inside effects or handlers, and give `useSyncExternalStore` a server snapshot.
 - No new runtime dependencies without asking. The nearby-ATM demo is dependency-free on purpose.
 - Lint and format with ESLint (the Vite React TS template) and Prettier.
 
@@ -40,7 +41,9 @@ Starter files for `tokens.css`, `projects.ts` and `NearbyAtmsPreview.tsx` are in
 ## Old portfolio at /v1
 - The previous CRA portfolio is kept in `legacy/v1/` (source) and served at `/v1` from a prebuilt snapshot in `public/v1/`. Don't edit `public/v1/` by hand. Change `legacy/v1/` and run `npm run build:v1`.
 - `legacy/`, `public/v1/` are excluded from ESLint, Prettier and TypeScript. Don't restyle or migrate them.
-- Routing: `public/_redirects` sends `/v1` and `/v1/*` to `/v1/index.html` **before** the `/*` catch-all. Any `netlify.toml` redirects (Phase 6) must keep that order. `vite.config.ts` mirrors this for dev and preview.
+- Routing: `public/_redirects` sends `/v1` and `/v1/*` to `/v1/index.html`. There is deliberately **no** `/* /index.html` catch-all: the new site is one page with `#anchors`, so unknown URLs get a real 404 with `public/404.html` (a catch-all would turn every URL into a soft-404 copy of the homepage). Don't add one in `netlify.toml` either, despite the snippet in `docs/05-launch-checklist.md`. `vite.config.ts` mirrors the `/v1` rules for dev and preview.
+- Headers: `public/_headers` sets the security headers, a one-year immutable cache for `/assets/*` and `/fonts/*`, and `X-Robots-Tag: noindex` on `/v1/*` so the old site stays out of search results.
+- SEO lives in `index.html` (title, description, Open Graph/Twitter, JSON-LD `@graph`), plus `public/og-image.png`, `robots.txt` and `sitemap.xml`. The JSON-LD repeats the skills list and ATM Status URL from `src/data`; keep them in sync, and bump `dateModified` and the sitemap `lastmod` on real content changes.
 
 ## Commands
 - `npm run dev`: local server
