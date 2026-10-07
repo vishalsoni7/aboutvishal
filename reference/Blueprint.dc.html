@@ -1,0 +1,237 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Portfolio — Blueprint</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;700&amp;family=IBM+Plex+Mono:wght@400;600&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#0a2540}a{color:#7fd8ff}a:hover{color:#c8efff}.bp{background-color:#0a2540;background-image:linear-gradient(rgba(127,216,255,0.09) 1px,transparent 1px),linear-gradient(90deg,rgba(127,216,255,0.09) 1px,transparent 1px),linear-gradient(rgba(127,216,255,0.04) 1px,transparent 1px),linear-gradient(90deg,rgba(127,216,255,0.04) 1px,transparent 1px);background-size:96px 96px,96px 96px,16px 16px,16px 16px}.bp-fine{background-color:rgba(10,37,64,0.6);background-image:radial-gradient(rgba(127,216,255,0.25) 1px,transparent 1px);background-size:16px 16px}.bbtn{background:#7fd8ff;color:#0a2540}.bbtn:hover{background:#c8efff;color:#0a2540}.bghost{border:1px solid #7fd8ff;color:#7fd8ff}.bghost:hover{background:rgba(127,216,255,0.12)}@keyframes bpPing{0%{transform:scale(.2);opacity:1}100%{transform:scale(1.4);opacity:0}}.bp-ping{animation:bpPing 1.8s ease-out infinite}.bp-ping2{animation-delay:.9s}.bl{color:#e6f1ff}.bl:hover{color:#7fd8ff}.brow:hover{background:rgba(127,216,255,0.08)}.brow2:hover{background:rgba(127,216,255,0.06)}
+</style>
+</helmet>
+<div onMouseMove="{{ onMove }}" onMouseLeave="{{ onLeave }}" class="bp" style="position: relative; overflow: hidden; width: 1440px; height: 3900px; box-sizing: border-box; display: flex; flex-direction: column; font-family: 'IBM Plex Mono', monospace; color: #e6f1ff; cursor: crosshair">
+<div style="position: absolute; left: 0; right: 0; top: {{ my }}px; height: 1px; background: #7fd8ff; opacity: {{ chOpacity }}; pointer-events: none; z-index: 20"></div>
+<div style="position: absolute; top: 0; bottom: 0; left: {{ mx }}px; width: 1px; background: #7fd8ff; opacity: {{ chOpacity }}; pointer-events: none; z-index: 20"></div>
+<div style="position: absolute; left: {{ tx }}px; top: {{ ty }}px; padding: 4px 8px; background: #7fd8ff; color: #0a2540; font-size: 11px; font-weight: 600; pointer-events: none; z-index: 21; opacity: {{ chOpacity }}; white-space: nowrap">X {{ mxs }} · Y {{ mys }}</div>
+<header style="position: relative; display: flex; justify-content: space-between; align-items: center; padding: 20px 64px; border-bottom: 1px solid #244a73; font-size: 13px">
+<span style="font-family: 'Chakra Petch', sans-serif; font-weight: 700; font-size: 20px; letter-spacing: 2px">VS / PORTFOLIO</span>
+<span style="color: #8fb0d4">SHEET 01 OF 01 · REV 2026.09</span>
+<nav style="display: flex; gap: 28px"><a href="#atm" class="bl" style="text-decoration: none; padding: 10px 0">01 ATM</a><a href="#deploy" class="bl" style="text-decoration: none; padding: 10px 0">02 DEPLOY</a><a href="#contact" class="bl" style="text-decoration: none; padding: 10px 0">CONTACT</a><a href="https://github.com/vishalsoni7" class="bl" style="text-decoration: none; padding: 10px 0">GITHUB ↗</a></nav>
+</header>
+<section style="position: relative; display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); column-gap: 24px; padding: 100px 64px 90px">
+<div style="grid-column: span 8; display: flex; flex-direction: column; gap: 28px">
+<span style="font-size: 13px; color: #7fd8ff">[ SPEC ] FRONTEND DEVELOPER · JAIPUR, IN · OPEN TO REMOTE</span>
+<h1 style="margin: 0; font-family: 'Chakra Petch', sans-serif; font-weight: 700; font-size: 112px; line-height: 0.92; letter-spacing: -2px; text-transform: uppercase">Vishal Soni<br><span style="color: #7fd8ff">engineers</span> useful<br>interfaces.</h1>
+<p style="margin: 0; max-width: 700px; font-size: 17px; line-height: 1.7; color: #8fb0d4">2.5 years of production React + TypeScript. The two builds below are live demos — find working ATMs near you, then clear a release queue.</p>
+</div>
+<div style="grid-column: 10 / span 3; align-self: end; display: flex; flex-direction: column; border: 1px solid #244a73; font-size: 13px">
+<div style="display: flex; justify-content: space-between; padding: 12px 14px; border-bottom: 1px solid #244a73"><span style="color: #8fb0d4">EXPERIENCE</span><span>2.5 YRS</span></div>
+<div style="display: flex; justify-content: space-between; padding: 12px 14px; border-bottom: 1px solid #244a73"><span style="color: #8fb0d4">PRODUCTS</span><span>06</span></div>
+<div style="display: flex; justify-content: space-between; padding: 12px 14px; border-bottom: 1px solid #244a73"><span style="color: #8fb0d4">REPOS</span><span>27</span></div>
+<a href="[RESUME PDF URL]" class="bbtn" style="display: flex; justify-content: center; align-items: center; min-height: 48px; text-decoration: none; font-weight: 600">DOWNLOAD RÉSUMÉ ↗</a>
+</div>
+</section>
+
+<section id="atm" style="position: relative; display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); column-gap: 32px; padding: 64px; border-top: 1px solid #244a73">
+<div style="grid-column: span 4; display: flex; flex-direction: column; gap: 22px">
+<span style="font-size: 13px; color: #7fd8ff">FIG. 01 — LIVE PILOT · BHILWARA · 2026</span>
+<h2 style="margin: 0; font-family: 'Chakra Petch', sans-serif; font-weight: 700; font-size: 64px; line-height: 1; text-transform: uppercase">ATM Status</h2>
+<p style="margin: 0; font-size: 16px; line-height: 1.7; color: #8fb0d4">Tells people whether a nearby ATM is working before they walk there. Anyone can report a status in two taps, no signup, and the map updates for everyone.</p>
+<ul style="margin: 0; padding-left: 20px; display: flex; flex-direction: column; gap: 8px; font-size: 14px; line-height: 1.5; color: #e6f1ff"><li>Nearby search on PostGIS via Supabase RPC functions</li><li>City data seeded from OpenStreetMap with a CSV → SQL pipeline</li><li>Auto-flags ATMs as “possibly removed” from repeated reports</li></ul>
+<div style="display: flex; flex-wrap: wrap; gap: 8px"><span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #7fd8ff; padding: 4px 10px; border: 1px solid #244a73">React</span><span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #7fd8ff; padding: 4px 10px; border: 1px solid #244a73">TypeScript</span><span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #7fd8ff; padding: 4px 10px; border: 1px solid #244a73">Vite</span><span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #7fd8ff; padding: 4px 10px; border: 1px solid #244a73">Leaflet</span><span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #7fd8ff; padding: 4px 10px; border: 1px solid #244a73">Supabase</span><span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #7fd8ff; padding: 4px 10px; border: 1px solid #244a73">PostGIS</span></div>
+<div style="display: flex; gap: 12px"><a href="https://github.com/vishalsoni7/atm-status" class="bbtn" style="display: inline-flex; align-items: center; min-height: 46px; padding: 0 18px; text-decoration: none; font-weight: 600">CODE ↗</a><a href="[ATM STATUS LIVE URL]" class="bghost" style="display: inline-flex; align-items: center; min-height: 46px; padding: 0 18px; text-decoration: none; font-weight: 600">TRY THE PILOT ↗</a></div>
+</div>
+<div style="grid-column: 5 / span 8; display: flex; flex-direction: column; gap: 12px">
+<div class="bp-fine" style="position: relative; height: 560px; border: 1px solid #7fd8ff; overflow: hidden">
+<div style="position: absolute; left: 0; right: 0; top: 52%; height: 12px; border-top: 1px solid #244a73; border-bottom: 1px solid #244a73"></div>
+<div style="position: absolute; top: 0; bottom: 0; left: 40%; width: 12px; border-left: 1px solid #244a73; border-right: 1px solid #244a73"></div>
+
+<sc-if value="{{ showIdle }}" hint-placeholder-val="{{ true }}">
+<div style="position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; background: rgba(10,37,64,0.55)">
+<div style="display: flex; flex-direction: column; align-items: center; text-align: center; gap: 18px; max-width: 460px; padding: 36px; background: #0a2540; border: 1px solid #7fd8ff">
+<span style="font-size: 12px; color: #7fd8ff">LIVE DEMO · USES YOUR LOCATION ONCE</span>
+<span style="font-family: 'Chakra Petch', sans-serif; font-size: 36px; font-weight: 700; line-height: 1.05; text-transform: uppercase">Which ATMs near you are working?</span>
+<span style="font-size: 14px; line-height: 1.6; color: #8fb0d4">Try the core of the app right here. Your location stays in your browser and is never stored.</span>
+<button type="button" onClick="{{ findMe }}" class="bbtn" style="min-height: 52px; padding: 0 26px; border: 0; font-family: 'IBM Plex Mono', monospace; font-size: 15px; font-weight: 600; cursor: pointer">◎ FIND ATMS NEAR ME</button>
+<button type="button" onClick="{{ showPilot }}" class="bl" style="min-height: 44px; padding: 0 12px; border: 0; background: transparent; font-family: 'IBM Plex Mono', monospace; font-size: 13px; text-decoration: underline; text-underline-offset: 4px; cursor: pointer">or explore the Bhilwara pilot</button>
+</div></div>
+</sc-if>
+
+<sc-if value="{{ showLocating }}" hint-placeholder-val="{{ false }}">
+<div style="position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 20px">
+<div style="position: relative; width: 200px; height: 200px">
+<div class="bp-ping" style="position: absolute; inset: 0; border: 1px solid #7fd8ff; border-radius: 50%"></div>
+<div class="bp-ping bp-ping2" style="position: absolute; inset: 0; border: 1px solid #7fd8ff; border-radius: 50%"></div>
+<div style="position: absolute; left: 88px; top: 88px; width: 24px; height: 24px; border-radius: 50%; background: #7fd8ff"></div>
+</div>
+<span style="font-size: 14px; color: #7fd8ff">LOCATING YOU…</span>
+</div>
+</sc-if>
+
+<sc-if value="{{ showMap }}" hint-placeholder-val="{{ false }}">
+<sc-if value="{{ nearMode }}" hint-placeholder-val="{{ true }}">
+<div style="position: absolute; left: 50%; top: 50%; width: 600px; height: 600px; margin: -300px 0 0 -300px; border: 1px dashed #244a73; border-radius: 50%; pointer-events: none"></div>
+<div style="position: absolute; left: 50%; top: 50%; width: 330px; height: 330px; margin: -165px 0 0 -165px; border: 1px dashed #244a73; border-radius: 50%; pointer-events: none"></div>
+<span style="position: absolute; left: 50%; top: calc(50% - 300px); margin-left: 8px; font-size: 11px; color: #8fb0d4">2 km</span>
+<span style="position: absolute; left: 50%; top: calc(50% - 165px); margin-left: 8px; font-size: 11px; color: #8fb0d4">1 km</span>
+<div class="bp-ping" style="position: absolute; left: 50%; top: 50%; width: 60px; height: 60px; margin: -30px 0 0 -30px; border: 1px solid #7fd8ff; border-radius: 50%"></div>
+<div style="position: absolute; left: 50%; top: 50%; width: 18px; height: 18px; margin: -9px 0 0 -9px; border-radius: 50%; background: #7fd8ff; border: 3px solid #0a2540; box-shadow: 0 0 0 2px #7fd8ff" aria-label="You are here"></div>
+</sc-if>
+<sc-for list="{{ pins }}" as="p" hint-placeholder-count="8">
+<button type="button" onMouseEnter="{{ p.pick }}" onFocus="{{ p.pick }}" onClick="{{ p.pick }}" aria-label="{{ p.bank }} ATM, {{ p.label }}" style="position: absolute; left: {{ p.x }}%; top: {{ p.y }}%; width: {{ p.sz }}px; height: {{ p.sz }}px; margin: {{ p.m }}px 0 0 {{ p.m }}px; border-radius: 50%; background: {{ p.c }}; border: 3px solid #0a2540; box-shadow: 0 0 0 {{ p.ring }}px {{ p.c }}; cursor: pointer; padding: 0; transition: box-shadow .2s, width .2s, height .2s"></button>
+</sc-for>
+<div style="position: absolute; left: 16px; top: 16px; display: flex; flex-direction: column; gap: 4px; padding: 10px 14px; background: #0a2540; border: 1px solid #244a73">
+<span style="font-size: 11px; color: #8fb0d4">{{ areaTag }}</span>
+<span style="font-size: 14px; color: #e6f1ff">{{ areaLabel }}</span>
+</div>
+<div style="position: absolute; right: 16px; top: 16px; width: 270px; display: flex; flex-direction: column; gap: 8px; padding: 16px; background: #0a2540; border: 1px solid #7fd8ff">
+<span style="font-size: 11px; color: #8fb0d4">SELECTED ATM</span>
+<span style="font-family: 'Chakra Petch', sans-serif; font-size: 24px; font-weight: 700">{{ sel.bank }}</span>
+<span style="font-size: 13px; color: #e6f1ff">{{ sel.where }}</span>
+<span style="display: flex; align-items: center; gap: 8px; font-size: 13px; color: {{ sel.c }}"><span style="width: 9px; height: 9px; border-radius: 50%; background: {{ sel.c }}"></span>{{ sel.label }}</span>
+<span style="font-size: 12px; color: #8fb0d4">{{ sel.when }}</span>
+<a href="[ATM STATUS LIVE URL]" class="bbtn" style="display: flex; justify-content: center; align-items: center; min-height: 44px; margin-top: 6px; text-decoration: none; font-size: 13px; font-weight: 600">REPORT IN THE APP ↗</a>
+</div>
+<button type="button" onClick="{{ reset }}" class="bghost" style="position: absolute; left: 16px; bottom: 16px; min-height: 40px; padding: 0 14px; background: #0a2540; font-family: 'IBM Plex Mono', monospace; font-size: 12px; cursor: pointer">↺ START OVER</button>
+</sc-if>
+</div>
+<div style="display: flex; justify-content: space-between; gap: 24px; font-size: 12px; color: #8fb0d4"><span>{{ footNote }}</span><span style="display: flex; gap: 16px; white-space: nowrap"><span style="color: #6ff0b0">● Working</span><span style="color: #ffb347">● Not working</span><span>● No reports</span></span></div>
+<sc-if value="{{ showMap }}" hint-placeholder-val="{{ false }}">
+<div style="display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 10px">
+<sc-for list="{{ nearest }}" as="n" hint-placeholder-count="4">
+<button type="button" onClick="{{ n.pick }}" class="brow" style="display: flex; flex-direction: column; gap: 6px; padding: 14px; border: 1px solid {{ n.border }}; background: #0a2540; color: #e6f1ff; font-family: 'IBM Plex Mono', monospace; text-align: left; cursor: pointer">
+<span style="font-size: 12px; color: #8fb0d4">{{ n.dist }}</span>
+<span style="font-family: 'Chakra Petch', sans-serif; font-size: 18px; font-weight: 700">{{ n.bank }}</span>
+<span style="display: flex; align-items: center; gap: 6px; font-size: 12px; color: {{ n.c }}"><span style="width: 8px; height: 8px; border-radius: 50%; background: {{ n.c }}"></span>{{ n.label }}</span>
+</button>
+</sc-for>
+</div>
+</sc-if>
+</div>
+</section>
+
+<section id="deploy" style="position: relative; display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); column-gap: 32px; padding: 64px; border-top: 1px solid #244a73">
+<div style="grid-column: span 8; display: flex; flex-direction: column; border: 1px solid #7fd8ff; background: rgba(10,37,64,0.85)">
+<div style="display: flex; justify-content: space-between; align-items: center; padding: 16px 20px; border-bottom: 1px solid #244a73; font-size: 13px"><span style="color: #8fb0d4">STAGING → PRODUCTION</span><span style="color: {{ pendColor }}">{{ pendLabel }}</span></div>
+<sc-for list="{{ rows }}" as="r" hint-placeholder-count="5">
+<button type="button" onClick="{{ r.toggle }}" class="brow" style="display: grid; grid-template-columns: 1fr 200px 170px; align-items: center; gap: 16px; padding: 18px 20px; border: 0; border-bottom: 1px solid #244a73; background: transparent; color: #e6f1ff; font-family: 'IBM Plex Mono', monospace; font-size: 15px; text-align: left; cursor: pointer">
+<span>{{ r.b }}</span>
+<span style="display: flex; align-items: center; gap: 8px; color: {{ r.c }}"><span style="width: 9px; height: 9px; border-radius: 50%; background: {{ r.c }}"></span>{{ r.label }}</span>
+<span style="justify-self: end; font-size: 12px; color: #8fb0d4">{{ r.action }}</span>
+</button>
+</sc-for>
+<div style="padding: 14px 20px; font-size: 12px; color: #8fb0d4">↑ Click a branch to mark it cherry-picked (demo)</div>
+</div>
+<div style="grid-column: 9 / span 4; display: flex; flex-direction: column; gap: 22px">
+<span style="font-size: 13px; color: #ffb347">FIG. 02 — DEV TOOLING · 2026</span>
+<h2 style="margin: 0; font-family: 'Chakra Petch', sans-serif; font-weight: 700; font-size: 64px; line-height: 1; text-transform: uppercase">Deploy Tracker</h2>
+<p style="margin: 0; font-size: 16px; line-height: 1.7; color: #8fb0d4">For teams that merge to staging but ship to production by cherry-picking. Shows every merged branch and which ones still haven’t reached production, so release day is a checklist, not guesswork.</p>
+<ul style="margin: 0; padding-left: 20px; display: flex; flex-direction: column; gap: 8px; font-size: 14px; line-height: 1.5; color: #e6f1ff"><li>Lists every branch merged into staging</li><li>Flags what still needs cherry-picking to production</li><li>One view to check before every release</li></ul>
+<div style="display: flex; flex-wrap: wrap; gap: 8px"><span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #7fd8ff; padding: 4px 10px; border: 1px solid #244a73">React</span><span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #7fd8ff; padding: 4px 10px; border: 1px solid #244a73">TypeScript</span><span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #7fd8ff; padding: 4px 10px; border: 1px solid #244a73">GitHub API</span></div>
+<span style="font-size: 13px; color: #8fb0d4">PRIVATE REPO · DEMO ON REQUEST</span>
+</div>
+</section>
+
+<section style="position: relative; display: flex; flex-direction: column; gap: 0; padding: 64px; border-top: 1px solid #244a73">
+<div style="display: flex; justify-content: space-between; padding-bottom: 16px; font-size: 13px; color: #8fb0d4"><span>PARTS LIST — OTHER BUILDS</span><a href="https://github.com/vishalsoni7" class="bl" style="text-decoration: none; padding: 6px 0">FULL INVENTORY ON GITHUB ↗</a></div>
+<a href="https://github.com/vishalsoni7/contractor-app" class="brow2" style="display: grid; grid-template-columns: 70px 300px 1fr 320px; gap: 24px; align-items: baseline; padding: 20px 0; border-top: 1px solid #244a73; text-decoration: none; color: #e6f1ff"><span style="color: #7fd8ff">P-03</span><span style="font-family: 'Chakra Petch', sans-serif; font-size: 26px; font-weight: 700; text-transform: uppercase">Kaamgar</span><span style="font-size: 14px; color: #8fb0d4">Attendance, holidays and payroll-ready reports for contractors. OTP login, Hindi + English.</span><span style="font-size: 12px; color: #8fb0d4; text-align: right">React · MUI · Express · MongoDB ↗</span></a><a href="https://github.com/vishalsoni7/ghar-banao" class="brow2" style="display: grid; grid-template-columns: 70px 300px 1fr 320px; gap: 24px; align-items: baseline; padding: 20px 0; border-top: 1px solid #244a73; text-decoration: none; color: #e6f1ff"><span style="color: #7fd8ff">P-04</span><span style="font-family: 'Chakra Petch', sans-serif; font-size: 26px; font-weight: 700; text-transform: uppercase">GharBanao</span><span style="font-size: 14px; color: #8fb0d4">Vendors, purchases, bill photos and payments for a house build, with reports.</span><span style="font-size: 12px; color: #8fb0d4; text-align: right">React · Recharts · Express · MongoDB ↗</span></a><a href="https://github.com/vishalsoni7/bitespeed-flow" class="brow2" style="display: grid; grid-template-columns: 70px 300px 1fr 320px; gap: 24px; align-items: baseline; padding: 20px 0; border-top: 1px solid #244a73; text-decoration: none; color: #e6f1ff"><span style="color: #7fd8ff">P-05</span><span style="font-family: 'Chakra Petch', sans-serif; font-size: 26px; font-weight: 700; text-transform: uppercase">Chatbot Flow Builder</span><span style="font-size: 14px; color: #8fb0d4">Drag-and-drop chatbot flows with node settings, validation and autosave.</span><span style="font-size: 12px; color: #8fb0d4; text-align: right">React · TypeScript · React Flow ↗</span></a><a href="https://github.com/vishalsoni7/web-text-heighlight" class="brow2" style="display: grid; grid-template-columns: 70px 300px 1fr 320px; gap: 24px; align-items: baseline; padding: 20px 0; border-top: 1px solid #244a73; text-decoration: none; color: #e6f1ff"><span style="color: #7fd8ff">P-06</span><span style="font-family: 'Chakra Petch', sans-serif; font-size: 26px; font-weight: 700; text-transform: uppercase">Text Highlighter</span><span style="font-size: 14px; color: #8fb0d4">Save highlights from any page and manage them from the popup.</span><span style="font-size: 12px; color: #8fb0d4; text-align: right">React · TypeScript · Chrome APIs ↗</span></a>
+</section>
+
+<section style="position: relative; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 32px; padding: 64px; border-top: 1px solid #244a73">
+<div style="display: flex; flex-direction: column; gap: 10px"><span style="font-size: 13px; color: #8fb0d4">OPERATOR LOG</span><span style="font-family: 'Chakra Petch', sans-serif; font-size: 30px; font-weight: 700">Frontend Developer · Afton Tickets</span><span style="font-size: 13px; color: #7fd8ff">[START YEAR] — PRESENT</span><p style="margin: 0; font-size: 15px; line-height: 1.7; color: #8fb0d4">Building the web app for a large-scale ticketing platform with React, TypeScript and Laravel/Blade.</p></div>
+<div style="display: flex; flex-direction: column; gap: 14px"><span style="font-size: 13px; color: #8fb0d4">MATERIALS</span><div style="display: flex; flex-wrap: wrap; gap: 8px"><span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #7fd8ff; padding: 4px 10px; border: 1px solid #244a73">React</span><span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #7fd8ff; padding: 4px 10px; border: 1px solid #244a73">TypeScript</span><span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #7fd8ff; padding: 4px 10px; border: 1px solid #244a73">JavaScript</span><span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #7fd8ff; padding: 4px 10px; border: 1px solid #244a73">Vite</span><span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #7fd8ff; padding: 4px 10px; border: 1px solid #244a73">Tailwind</span><span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #7fd8ff; padding: 4px 10px; border: 1px solid #244a73">Material UI</span><span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #7fd8ff; padding: 4px 10px; border: 1px solid #244a73">React Flow</span><span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #7fd8ff; padding: 4px 10px; border: 1px solid #244a73">Leaflet</span><span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #7fd8ff; padding: 4px 10px; border: 1px solid #244a73">Node.js</span><span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #7fd8ff; padding: 4px 10px; border: 1px solid #244a73">Express</span><span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #7fd8ff; padding: 4px 10px; border: 1px solid #244a73">NestJS</span><span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #7fd8ff; padding: 4px 10px; border: 1px solid #244a73">MongoDB</span><span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #7fd8ff; padding: 4px 10px; border: 1px solid #244a73">Supabase</span><span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #7fd8ff; padding: 4px 10px; border: 1px solid #244a73">PostgreSQL</span><span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #7fd8ff; padding: 4px 10px; border: 1px solid #244a73">PHP</span><span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #7fd8ff; padding: 4px 10px; border: 1px solid #244a73">Laravel</span></div></div>
+</section>
+
+<section id="contact" style="position: relative; display: flex; flex-direction: column; gap: 28px; padding: 96px 64px; border-top: 1px solid #7fd8ff">
+<span style="font-size: 13px; color: #7fd8ff">[ END OF SHEET ] — REQUEST FOR COLLABORATION</span>
+<h2 style="margin: 0; font-family: 'Chakra Petch', sans-serif; font-weight: 700; font-size: 104px; line-height: 0.92; text-transform: uppercase">Let’s draft<br>the next build.</h2>
+<div style="display: flex; gap: 12px"><a href="mailto:[YOUR EMAIL]" class="bbtn" style="display: inline-flex; align-items: center; min-height: 52px; padding: 0 24px; text-decoration: none; font-weight: 600">[YOUR EMAIL]</a><a href="[LINKEDIN URL]" class="bghost" style="display: inline-flex; align-items: center; min-height: 52px; padding: 0 24px; text-decoration: none; font-weight: 600">LINKEDIN ↗</a><a href="https://github.com/vishalsoni7" class="bghost" style="display: inline-flex; align-items: center; min-height: 52px; padding: 0 24px; text-decoration: none; font-weight: 600">GITHUB ↗</a></div>
+</section>
+<footer style="position: relative; margin-top: auto; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); border-top: 1px solid #244a73; font-size: 12px; color: #8fb0d4"><span style="padding: 18px 64px; border-right: 1px solid #244a73">DRAWN BY: V. SONI</span><span style="padding: 18px 24px; border-right: 1px solid #244a73">LOCATION: JAIPUR, IN</span><span style="padding: 18px 24px; border-right: 1px solid #244a73">SCALE: 1:1</span><span style="padding: 18px 24px">© 2026</span></footer>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":3900}}'>
+class Component extends DCLogic {
+  track(e, W) {
+    const r = e.currentTarget.getBoundingClientRect();
+    const k = W / r.width;
+    this._p = { mx: Math.round((e.clientX - r.left) * k), my: Math.round((e.clientY - r.top) * k), inside: true };
+    if (!this._raf) {
+      this._raf = requestAnimationFrame(() => { this._raf = 0; this.onPoint && this.onPoint(this._p); this.setState(this._p); });
+    }
+  }
+  componentWillUnmount() { if (this._raf) cancelAnimationFrame(this._raf); }
+  locate() {
+    if (!navigator.geolocation) return this.setState({ phase: 'pilot', pin: 0, note: 'Location isn’t available here, so this is the Bhilwara pilot instead.' });
+    this.setState({ phase: 'locating' });
+    navigator.geolocation.getCurrentPosition(
+      (pos) => this.setState({ phase: 'near', pin: 0, note: null, near: this.fakeNear(pos.coords.latitude, pos.coords.longitude), coords: pos.coords.latitude.toFixed(3) + '°, ' + pos.coords.longitude.toFixed(3) + '°' }),
+      () => this.setState({ phase: 'pilot', pin: 0, note: 'Location was blocked, so this is the Bhilwara pilot instead.' }),
+      { timeout: 10000, maximumAge: 60000 }
+    );
+  }
+  fakeNear(lat, lng) {
+    let a = Math.floor(Math.abs(lat * 1e4 + lng * 1e4)) || 7;
+    const rnd = () => { a |= 0; a = (a + 0x6D2B79F5) | 0; let t = Math.imul(a ^ (a >>> 15), 1 | a); t = (t + Math.imul(t ^ (t >>> 7), 61 | t)) ^ t; return ((t ^ (t >>> 14)) >>> 0) / 4294967296; };
+    const banks = ['SBI', 'HDFC Bank', 'ICICI Bank', 'Axis Bank', 'PNB', 'Bank of Baroda', 'Kotak', 'Canara Bank'];
+    const dirs = ['N', 'NE', 'E', 'SE', 'S', 'SW', 'W', 'NW'];
+    const out = [];
+    for (let i = 0; i < 8; i++) {
+      const ang = rnd() * Math.PI * 2, d = 150 + Math.pow(rnd(), 0.8) * 1800;
+      const r = rnd(), st = r < 0.6 ? 0 : (r < 0.8 ? 1 : 2);
+      const dir = dirs[Math.round(((ang * 180 / Math.PI) % 360) / 45) % 8];
+      out.push({ bank: banks[Math.floor(rnd() * banks.length)], st, d, dir, t: 5 + Math.floor(rnd() * 90),
+        x: 50 + Math.sin(ang) * (d / 2000) * 34.9, y: 50 - Math.cos(ang) * (d / 2000) * 53.6,
+        where: (d < 1000 ? Math.round(d / 10) * 10 + ' m ' : (d / 1000).toFixed(1) + ' km ') + dir + ' of you' });
+    }
+    return out.sort((p, q) => p.d - q.d);
+  }
+  renderVals() {
+    const s = this.state || {};
+    const mx = s.mx ?? 1100, my = s.my ?? 300;
+    const C = ['#6ff0b0', '#ffb347', '#6c8bb0'];
+    const L = ['Working', 'Not working', 'No reports yet'];
+    const WHEN = ['Reported working {t} min ago', 'Reported not working {t} min ago', 'Nobody has reported it yet'];
+    const PILOT = [{"x": 18, "y": 30, "st": 0, "name": "Station Road", "bank": "SBI"}, {"x": 34, "y": 58, "st": 0, "name": "Azad Chowk", "bank": "PNB"}, {"x": 52, "y": 24, "st": 1, "name": "Pur Road", "bank": "HDFC"}, {"x": 66, "y": 64, "st": 0, "name": "Subhash Nagar", "bank": "ICICI"}, {"x": 78, "y": 36, "st": 2, "name": "Bapu Nagar", "bank": "Axis"}, {"x": 42, "y": 78, "st": 1, "name": "Sanganeri Gate", "bank": "BoB"}, {"x": 24, "y": 72, "st": 0, "name": "RC Vyas Colony", "bank": "SBI"}, {"x": 86, "y": 70, "st": 0, "name": "Shastri Nagar", "bank": "Canara"}, {"x": 60, "y": 46, "st": 0, "name": "Collectorate", "bank": "SBI"}];
+    const phase = s.phase || 'idle';
+    const near = s.near || null;
+    const list = phase === 'near' && near ? near : PILOT.map((p) => ({ ...p, where: p.name + ', Bhilwara', t: 10 + ((p.x * 7) % 50) }));
+    const si = Math.min(s.pin ?? 0, list.length - 1);
+    const p0 = list[si];
+    const pickI = (i) => () => this.setState({ pin: i });
+    const fmt = (m) => m < 1000 ? Math.round(m / 10) * 10 + ' m' : (m / 1000).toFixed(1) + ' km';
+    const ranked = list.map((p, i) => ({ ...p, i })).sort((a, b) => (a.d ?? 0) - (b.d ?? 0)).slice(0, 4);
+    const init = [0, 1, 1, 0, 2];
+    const st = s.br || init;
+    const B = ["feature/search-filters", "fix/payment-retry", "feature/dark-mode", "fix/date-picker-tz", "chore/upgrade-vite"];
+    const SC = ['#6ff0b0', '#ffb347', '#8fb0d4'];
+    const SL = ['Shipped to prod', 'Needs cherry-pick', 'Staging only'];
+    const pending = st.filter((x) => x === 1).length;
+    const pad = (n) => String(Math.max(0, n)).padStart(4, '0');
+    return {
+      mx, my, mxs: pad(mx), mys: pad(my), tx: mx + 12, ty: my + 12, chOpacity: s.inside ? 0.7 : 0,
+      onMove: (e) => this.track(e, 1440),
+      onLeave: () => this.setState({ inside: false }),
+      showIdle: phase === 'idle', showLocating: phase === 'locating', showMap: phase === 'near' || phase === 'pilot', nearMode: phase === 'near',
+      findMe: () => this.locate(),
+      showPilot: () => this.setState({ phase: 'pilot', pin: 0, note: null }),
+      reset: () => this.setState({ phase: 'idle', pin: 0, note: null }),
+      pins: list.map((p, i) => ({ ...p, c: C[p.st], label: L[p.st], sz: i === si ? 24 : 16, m: i === si ? -12 : -8, ring: i === si ? 6 : 1, pick: pickI(i) })),
+      sel: { ...p0, c: C[p0.st], label: L[p0.st], when: WHEN[p0.st].replace('{t}', p0.t) },
+      nearest: ranked.map((p) => ({ bank: p.bank, c: C[p.st], label: L[p.st], dist: phase === 'near' ? fmt(p.d) + ' ' + p.dir : p.name, border: p.i === si ? '#7fd8ff' : '#244a73', pick: pickI(p.i) })),
+      areaTag: phase === 'near' ? 'NEAR YOU' : 'PILOT CITY',
+      areaLabel: phase === 'near' ? s.coords : 'Bhilwara, Rajasthan',
+      footNote: s.note || (phase === 'near' ? 'Preview: ATM spots and statuses here are simulated around you. The live app shows real reports.' : (phase === 'pilot' ? 'Sample statuses for the Bhilwara pilot · hover or tap a pin' : 'Hit the button to see ATMs within 2 km of you')),
+      rows: B.map((b, i) => ({ b, c: SC[st[i]], label: SL[st[i]], action: st[i] === 1 ? 'MARK PICKED →' : (st[i] === 0 && init[i] === 1 ? 'UNDO' : '—'),
+        toggle: () => { const n = [...st]; n[i] = n[i] === 1 ? 0 : (n[i] === 0 && init[i] === 1 ? 1 : n[i]); this.setState({ br: n }); } })),
+      pendLabel: pending ? pending + ' PENDING' : 'ALL CLEAR ✓', pendColor: pending ? '#ffb347' : '#6ff0b0'
+    };
+  }
+}
+</script>
+</body>
+</html>

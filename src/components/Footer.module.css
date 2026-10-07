@@ -1,0 +1,20 @@
+.footer {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.cell {
+  padding: 18px 24px;
+  border-right: 1px solid var(--line);
+}
+
+.cell:first-child {
+  padding-left: var(--pad-x);
+}
+
+.cell:last-child {
+  border-right: 0;
+}

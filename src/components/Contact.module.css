@@ -1,0 +1,28 @@
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  padding: 96px var(--pad-x);
+  border-top: 1px solid var(--cyan);
+}
+
+.title {
+  font-size: 104px;
+  line-height: 0.92;
+  text-transform: uppercase;
+}
+
+.line {
+  display: block;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.btn {
+  min-height: 52px;
+  padding: 0 24px;
+}

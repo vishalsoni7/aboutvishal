@@ -7,7 +7,7 @@ export const About = () => {
       <div className="C">
         <div>
           <div className="D">
-            <img src="me5.jpg" alt="vishal" title="Me" className="linkedin" />
+            <img src={`${process.env.PUBLIC_URL}/me5.JPG`} alt="vishal" title="Me" className="linkedin" />
             <h1>
               <strong> —hi! </strong>
             </h1>

@@ -1,0 +1,22 @@
+.section {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  column-gap: var(--gap);
+  padding: 64px var(--pad-x);
+  border-top: 1px solid var(--line);
+}
+
+.text {
+  grid-column: span 4;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.visual {
+  grid-column: 5 / span 8;
+  min-width: 0;
+}

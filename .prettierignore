@@ -1,0 +1,7 @@
+dist
+public
+legacy
+reference
+package-lock.json
+docs
+*.md

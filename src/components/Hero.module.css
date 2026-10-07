@@ -1,0 +1,67 @@
+.hero {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  column-gap: 24px;
+  padding: 100px var(--pad-x) 90px;
+}
+
+.intro {
+  grid-column: span 8;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.title {
+  font-size: 112px;
+  line-height: 0.92;
+  letter-spacing: -2px;
+  text-transform: uppercase;
+}
+
+.line {
+  display: block;
+}
+
+.accent {
+  color: var(--cyan);
+}
+
+.lede {
+  max-width: 700px;
+  color: var(--muted);
+  font-size: 17px;
+  line-height: 1.7;
+}
+
+.spec {
+  grid-column: 10 / span 3;
+  align-self: end;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--line);
+  font-size: 13px;
+}
+
+.specList {
+  margin: 0;
+}
+
+.specRow {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px 14px;
+  border-bottom: 1px solid var(--line);
+}
+
+.specRow dt {
+  color: var(--muted);
+}
+
+.specRow dd {
+  margin: 0;
+}
+
+.resume {
+  min-height: 48px;
+}
