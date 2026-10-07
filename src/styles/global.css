@@ -197,3 +197,33 @@ a:hover {
     transition-duration: 0.01ms !important;
   }
 }
+
+/* ---------- page load: a plotter scan sweeps down the sheet once ---------- */
+@media (prefers-reduced-motion: no-preference) {
+  body::after {
+    content: '';
+    position: fixed;
+    inset: 0 0 auto;
+    z-index: 40;
+    height: 140px;
+    border-bottom: 1px solid var(--cyan);
+    background: linear-gradient(transparent, var(--cyan-wash));
+    box-shadow: 0 6px 18px -8px var(--cyan);
+    pointer-events: none;
+    animation: sheet-scan 1.1s cubic-bezier(0.55, 0.05, 0.35, 1) both;
+  }
+
+  @keyframes sheet-scan {
+    from {
+      transform: translateY(-140px);
+      opacity: 1;
+    }
+    85% {
+      opacity: 1;
+    }
+    to {
+      transform: translateY(100vh);
+      opacity: 0;
+    }
+  }
+}

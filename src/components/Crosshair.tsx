@@ -5,7 +5,6 @@ import { usePointer } from '../hooks/usePointer'
 import { usePrefersReducedMotion } from '../hooks/usePrefersReducedMotion'
 import styles from './Crosshair.module.css'
 
-const pad = (n: number) => String(Math.max(0, Math.round(n))).padStart(4, '0')
 const lerp = (a: number, b: number, k: number) => a + (b - a) * k
 
 const RETICLE = 34 // px, the free-moving reticle's size
@@ -20,9 +19,9 @@ function targetAt(x: number, y: number) {
 }
 
 /**
- * Blueprint crosshair: full-page lines that ease after the pointer, a reticle of drafting
- * brackets that spins as it moves, and a counting coordinate readout. Over a link or button the
- * brackets glide out to frame it and the readout shows its size. Mouse + desktop width only, off
+ * Blueprint crosshair: full-page lines that ease after the pointer and a reticle of drafting
+ * brackets that spins as it moves. Over a link or button the brackets glide out to frame it and a
+ * readout shows its size. Mouse + desktop width only, off
  * under reduced motion. Everything is written straight to the DOM inside rAF (see usePointer).
  */
 export default function Crosshair() {
@@ -40,8 +39,6 @@ export default function Crosshair() {
     live: false,
     x: 0,
     y: 0,
-    rx: 0,
-    ry: 0,
     bx: 0,
     by: 0,
     bw: 0,
@@ -64,7 +61,7 @@ export default function Crosshair() {
 
     if (!s.live) {
       // First frame after entering: start where the pointer is instead of flying in from 0,0.
-      Object.assign(s, { live: true, x: tx, y: ty, rx: pos.pageX, ry: pos.pageY })
+      Object.assign(s, { live: true, x: tx, y: ty })
       Object.assign(s, { bx: tx - RETICLE / 2, by: ty - RETICLE / 2, bw: RETICLE, bh: RETICLE })
     }
     if (pos.presses !== s.presses) {
@@ -72,13 +69,11 @@ export default function Crosshair() {
       s.pulse = 1
     }
 
-    // Lines and reticle ease towards the pointer; the readout counts towards the page coords.
+    // Lines and reticle ease towards the pointer.
     const px = s.x
     const py = s.y
     s.x = lerp(s.x, tx, 0.16)
     s.y = lerp(s.y, ty, 0.16)
-    s.rx = lerp(s.rx, pos.pageX, 0.2)
-    s.ry = lerp(s.ry, pos.pageY, 0.2)
     s.pulse *= 0.86
 
     const target = targetAt(tx, ty)
@@ -112,16 +107,15 @@ export default function Crosshair() {
     box.style.transform = `translate3d(${s.bx}px, ${s.by}px, 0) rotate(${s.angle}deg)`
 
     rootEl.dataset.locked = target ? 'true' : 'false'
+    // The size readout only shows while locked on (CSS hides it otherwise).
     if (target) {
       const r = target.getBoundingClientRect()
       const kind = target.tagName === 'A' ? copy.link : copy.button
       label.textContent = `${copy.lock} · ${kind} · W ${Math.round(r.width)} × H ${Math.round(r.height)}`
-    } else {
-      label.textContent = `X ${pad(s.rx)} · Y ${pad(s.ry)}`
     }
-    // Free: beside the crossing. Locked: off the frame's bottom-right corner. Flip near edges.
-    const ax = target ? s.bx + s.bw - READOUT_GAP : s.x
-    const ay = target ? s.by + s.bh - READOUT_GAP : s.y
+    // Off the frame's bottom-right corner, flipped near the window's edges.
+    const ax = s.bx + s.bw - READOUT_GAP
+    const ay = s.by + s.bh - READOUT_GAP
     const left =
       ax + READOUT_GAP + label.offsetWidth > window.innerWidth
         ? ax - READOUT_GAP - label.offsetWidth

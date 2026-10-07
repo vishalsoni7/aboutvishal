@@ -76,3 +76,75 @@
     min-height: 44px;
   }
 }
+
+/* ---------- page load: the title-block rule draws across, then its contents appear ---------- */
+.header {
+  position: relative;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .header::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -1px;
+    height: 1px;
+    background: var(--cyan);
+    transform-origin: left;
+    animation: rule-draw 1s cubic-bezier(0.65, 0, 0.35, 1) both;
+  }
+
+  .brand,
+  .sheet,
+  .nav li {
+    animation: header-in 0.5s ease-out both;
+  }
+
+  .brand {
+    animation-delay: 0.15s;
+  }
+
+  .sheet {
+    animation-delay: 0.3s;
+  }
+
+  .nav li:nth-child(1) {
+    animation-delay: 0.4s;
+  }
+
+  .nav li:nth-child(2) {
+    animation-delay: 0.47s;
+  }
+
+  .nav li:nth-child(3) {
+    animation-delay: 0.54s;
+  }
+
+  .nav li:nth-child(4) {
+    animation-delay: 0.61s;
+  }
+}
+
+/* Draws in cyan, then settles to the normal line colour */
+@keyframes rule-draw {
+  0% {
+    transform: scaleX(0);
+    opacity: 1;
+  }
+  70% {
+    transform: scaleX(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scaleX(1);
+    opacity: 0;
+  }
+}
+
+@keyframes header-in {
+  from {
+    opacity: 0;
+    transform: translateY(-6px);
+  }
+}
