@@ -102,3 +102,98 @@
     font-size: 15px;
   }
 }
+
+/* ---------- page load: label drafts in, headline lines rise one by one, spec table fills ---------- */
+@media (prefers-reduced-motion: no-preference) {
+  .intro > :first-child {
+    animation: draft-in 0.7s cubic-bezier(0.65, 0, 0.35, 1) 0.2s both;
+  }
+
+  .line {
+    animation: line-rise 0.75s cubic-bezier(0.2, 0.75, 0.2, 1) both;
+  }
+
+  .line:nth-child(1) {
+    animation-delay: 0.3s;
+  }
+
+  .line:nth-child(2) {
+    animation-delay: 0.42s;
+  }
+
+  .line:nth-child(3) {
+    animation-delay: 0.54s;
+  }
+
+  .lede {
+    animation: fade-up 0.6s ease-out 0.75s both;
+  }
+
+  .specRow {
+    animation: row-in 0.5s ease-out both;
+  }
+
+  .specRow:nth-child(1) {
+    animation-delay: 0.7s;
+  }
+
+  .specRow:nth-child(2) {
+    animation-delay: 0.8s;
+  }
+
+  .specRow:nth-child(3) {
+    animation-delay: 0.9s;
+  }
+
+  .spec {
+    animation: spec-frame 0.6s ease-out 0.6s both;
+  }
+
+  .resume {
+    animation: fade-up 0.5s ease-out 1s both;
+  }
+}
+
+/* Text revealed left to right, like a pen drawing it */
+@keyframes draft-in {
+  from {
+    clip-path: inset(0 100% 0 0);
+  }
+  to {
+    clip-path: inset(0 0 0 0);
+  }
+}
+
+/* Each headline line wipes up out of its own baseline */
+@keyframes line-rise {
+  from {
+    opacity: 0;
+    transform: translateY(45%);
+    clip-path: inset(0 0 100% 0);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+    clip-path: inset(-20% -5% -20% -5%);
+  }
+}
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+}
+
+@keyframes row-in {
+  from {
+    opacity: 0;
+    transform: translateX(14px);
+  }
+}
+
+@keyframes spec-frame {
+  from {
+    border-color: transparent;
+  }
+}

@@ -99,7 +99,10 @@
   font-weight: 600;
   font-variant-numeric: tabular-nums;
   white-space: nowrap;
-  transition: background-color 0.15s;
+  opacity: 0;
+  transition:
+    background-color 0.15s,
+    opacity 0.15s;
 }
 
 /* Locked onto a link or button */
@@ -141,6 +144,7 @@
 
 .root[data-locked='true'] .readout {
   background: var(--orange);
+  opacity: 1;
 }
 
 /* Belt and braces: the component already skips rendering in these cases. */
