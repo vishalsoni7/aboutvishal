@@ -1,5 +1,6 @@
 // All project copy for the portfolio. Placeholders are in [BRACKETS].
 const GH = 'https://github.com/vishalsoni7'
+export const ATM_APP_URL = import.meta.env.VITE_ATM_APP_URL || '[ATM STATUS LIVE URL]'
 
 export interface Flagship {
   id: 'atm' | 'deploy'
@@ -27,7 +28,7 @@ export const flagships: Flagship[] = [
     ],
     stack: ['React', 'TypeScript', 'Vite', 'Leaflet', 'Supabase', 'PostGIS'],
     codeUrl: `${GH}/atm-status`,
-    liveUrl: import.meta.env.VITE_ATM_APP_URL || '[ATM STATUS LIVE URL]',
+    liveUrl: ATM_APP_URL,
   },
   {
     id: 'deploy',
@@ -112,3 +113,59 @@ export const pilotPins = [
 ] as const
 
 export const GITHUB_URL = GH
+
+export const projectCta = { code: 'CODE ↗', live: 'TRY THE PILOT ↗' }
+
+// Copy for the nearby-ATM demo (NearbyAtmsPreview).
+export const atmDemo = {
+  idle: {
+    label: 'LIVE DEMO · USES YOUR LOCATION ONCE',
+    title: 'Which ATMs near you are working?',
+    text: 'Try the core of the app right here. Your location stays in your browser and is never stored.',
+    find: '◎ FIND ATMS NEAR ME',
+    pilot: 'or explore the Bhilwara pilot',
+  },
+  locating: 'LOCATING YOU…',
+  loading: 'LOOKING FOR ATMS…',
+  empty: 'No ATMs found within 2 km of you.',
+  errors: {
+    lookup:
+      'Couldn’t reach the ATM map service. It’s a free public service and is sometimes overloaded, so try again in a moment.',
+    unavailable:
+      'Your browser couldn’t find your location. Check that Location Services is on for this browser.',
+    timeout: 'Finding your location took too long.',
+  },
+  retry: 'TRY AGAIN',
+  startOver: '↺ START OVER',
+  selected: 'SELECTED ATM',
+  selectedSample: 'SELECTED ATM · SAMPLE',
+  report: 'REPORT IN THE APP ↗',
+  nearTag: 'NEAR YOU',
+  nearLabel: 'Within 2 km',
+  pilotTag: 'PILOT CITY · SAMPLE DATA',
+  pilotLabel: 'Bhilwara, Rajasthan',
+  ringLabels: ['1 km', '2 km'],
+  you: 'You are here',
+  status: { working: 'Working', not_working: 'Not working', unknown: 'No reports yet' },
+  legend: { working: 'Working', not_working: 'Not working', unknown: 'No reports' },
+  noReports: 'Nobody has reported it yet',
+  captions: {
+    idle: 'Hit the button to see ATMs within 2 km of you',
+    live: 'Live statuses from ATM Status reports · hover or tap a pin',
+    osm: 'ATM Status isn’t live in your city yet. These are real ATM locations from OpenStreetMap, waiting for their first report.',
+    pilot: 'Sample statuses for the Bhilwara pilot · hover or tap a pin',
+    denied: 'Location was blocked, so these are sample statuses for the Bhilwara pilot.',
+    unsupported:
+      'Location isn’t available here, so these are sample statuses for the Bhilwara pilot.',
+  },
+}
+
+// Copy for the Deploy Tracker demo (DeployDemo). Branches above are sample data.
+export const deployDemo = {
+  header: 'STAGING → PRODUCTION',
+  pending: (n: number) => `${n} PENDING`,
+  allClear: 'ALL CLEAR ✓',
+  status: ['Shipped to prod', 'Needs cherry-pick', 'Staging only'],
+  actions: { pick: 'MARK PICKED →', undo: 'UNDO', none: '—' },
+  caption: '↑ Click a branch to mark it cherry-picked (demo)',
+}

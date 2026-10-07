@@ -13,6 +13,10 @@
   --cyan-wash: rgba(127, 216, 255, 0.08);
   --cyan-wash-soft: rgba(127, 216, 255, 0.06);
   --ghost-hover: rgba(127, 216, 255, 0.12);
+  --panel-bg: rgba(10, 37, 64, 0.6);
+  --panel-solid: rgba(10, 37, 64, 0.85);
+  --panel-dot: rgba(127, 216, 255, 0.25);
+  --veil: rgba(10, 37, 64, 0.55);
   --grid-major: rgba(127, 216, 255, 0.09);
   --grid-minor: rgba(127, 216, 255, 0.04);
 
