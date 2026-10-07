@@ -17,7 +17,7 @@ export default function Hero() {
                 ) : (
                   part.text
                 ),
-              )}
+              )}{' '}
             </span>
           ))}
         </h1>

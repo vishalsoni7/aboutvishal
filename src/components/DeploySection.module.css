@@ -1,0 +1,41 @@
+.section {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  column-gap: var(--gap);
+  padding: 64px var(--pad-x);
+  border-top: 1px solid var(--line);
+}
+
+.visual {
+  grid-column: 1 / span 8;
+  min-width: 0;
+}
+
+.text {
+  grid-column: 9 / span 4;
+}
+
+.note {
+  color: var(--muted);
+  font-size: 13px;
+}
+
+/* Below 1200px: one column, demo first (already first in the DOM) */
+@media (max-width: 1199px) {
+  .section {
+    grid-template-columns: minmax(0, 1fr);
+    row-gap: 48px;
+  }
+
+  .text,
+  .visual {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 899px) {
+  .section {
+    padding: 48px var(--pad-x);
+    row-gap: 40px;
+  }
+}

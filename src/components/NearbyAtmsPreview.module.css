@@ -1,0 +1,494 @@
+.demo {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* ---------- panel ---------- */
+/* The map panel plus the selected-ATM card, which overlays the map on desktop */
+.stage {
+  position: relative;
+}
+
+.panel {
+  --radar-r: 300px; /* 2 km on the radar */
+  position: relative;
+  height: 560px;
+  overflow: hidden;
+  border: 1px solid var(--cyan);
+  background-color: var(--panel-bg);
+  background-image: radial-gradient(var(--panel-dot) 1px, transparent 1px);
+  background-size: 16px 16px;
+}
+
+/* Two "roads" crossing the sheet, as in the design */
+.roadH,
+.roadV {
+  position: absolute;
+  pointer-events: none;
+}
+
+.roadH {
+  left: 0;
+  right: 0;
+  top: 52%;
+  height: 12px;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+.roadV {
+  top: 0;
+  bottom: 0;
+  left: 40%;
+  width: 12px;
+  border-left: 1px solid var(--line);
+  border-right: 1px solid var(--line);
+}
+
+/* ---------- idle card ---------- */
+.veil {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  background: var(--veil);
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+  max-width: 460px;
+  padding: 36px;
+  border: 1px solid var(--cyan);
+  background: var(--bg);
+  text-align: center;
+}
+
+.card :global(.label) {
+  font-size: 12px;
+}
+
+.cardTitle {
+  font-size: 36px;
+  line-height: 1.05;
+  text-transform: uppercase;
+}
+
+.cardText {
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.findBtn {
+  min-height: 52px;
+  padding: 0 26px;
+  font-size: 15px;
+}
+
+.textBtn {
+  min-height: 44px;
+  padding: 0 12px;
+  border: 0;
+  background: transparent;
+  color: var(--ink);
+  font-size: 13px;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.textBtn:hover {
+  color: var(--cyan);
+}
+
+/* ---------- locating / messages ---------- */
+.center {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  padding: 24px;
+  text-align: center;
+}
+
+.pingBox {
+  position: relative;
+  width: 200px;
+  height: 200px;
+}
+
+.ping {
+  position: absolute;
+  inset: 0;
+  border: 1px solid var(--cyan);
+  border-radius: 50%;
+  animation: ping 1.8s ease-out infinite;
+}
+
+.pingLate {
+  animation-delay: 0.9s;
+}
+
+.pingDot {
+  position: absolute;
+  left: 88px;
+  top: 88px;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: var(--cyan);
+}
+
+@keyframes ping {
+  from {
+    transform: scale(0.2);
+    opacity: 1;
+  }
+  to {
+    transform: scale(1.4);
+    opacity: 0;
+  }
+}
+
+.statusText {
+  color: var(--cyan);
+  font-size: 14px;
+}
+
+.message {
+  font-size: 15px;
+}
+
+/* ---------- radar ---------- */
+.ring {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: calc(var(--radar-r) * 2 * var(--f));
+  height: calc(var(--radar-r) * 2 * var(--f));
+  border: 1px dashed var(--line);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}
+
+.ringLabel {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  margin-left: 8px;
+  color: var(--muted);
+  font-size: 11px;
+}
+
+.youPing {
+  inset: auto;
+  left: 50%;
+  top: 50%;
+  width: 60px;
+  height: 60px;
+  margin: -30px 0 0 -30px;
+}
+
+.you {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 18px;
+  height: 18px;
+  margin: -9px 0 0 -9px;
+  border: 3px solid var(--bg);
+  border-radius: 50%;
+  background: var(--cyan);
+  box-shadow: 0 0 0 2px var(--cyan);
+}
+
+/* Pins: 44px hit area around a 16px dot (24px when selected) */
+.pin {
+  position: absolute;
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: transparent;
+  transform: translate(-50%, -50%);
+}
+
+.pinDot {
+  width: 16px;
+  height: 16px;
+  border: 3px solid var(--bg);
+  border-radius: 50%;
+  background: currentColor;
+  box-shadow: 0 0 0 1px currentColor;
+  transition:
+    width 0.2s,
+    height 0.2s,
+    box-shadow 0.2s;
+}
+
+.pinActive {
+  z-index: 1;
+}
+
+.pinActive .pinDot {
+  width: 24px;
+  height: 24px;
+  box-shadow: 0 0 0 6px currentColor;
+}
+
+.working {
+  color: var(--status-working);
+}
+
+.notWorking {
+  color: var(--status-not-working);
+}
+
+.unknown {
+  color: var(--status-unknown);
+}
+
+/* ---------- overlays ---------- */
+.area {
+  position: absolute;
+  left: 16px;
+  top: 16px;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 10px 14px;
+  border: 1px solid var(--line);
+  background: var(--bg);
+}
+
+.areaTag {
+  color: var(--muted);
+  font-size: 11px;
+}
+
+.areaLabel {
+  font-size: 14px;
+}
+
+.selected {
+  position: absolute;
+  right: 16px;
+  top: 16px;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 270px;
+  padding: 16px;
+  border: 1px solid var(--cyan);
+  background: var(--bg);
+}
+
+.selBank {
+  font-family: var(--font-display);
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.selWhere {
+  font-size: 13px;
+}
+
+.selWhen {
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.statusLine {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+}
+
+.dot {
+  flex: none;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: currentColor;
+}
+
+.reportBtn {
+  min-height: 44px;
+  margin-top: 6px;
+  font-size: 13px;
+}
+
+.startOver {
+  position: absolute;
+  left: 16px;
+  bottom: 16px;
+  z-index: 2;
+  min-height: 44px;
+  padding: 0 14px;
+  background: var(--bg);
+  font-size: 12px;
+  font-weight: 400;
+}
+
+/* ---------- below the panel ---------- */
+.caption {
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.legend {
+  display: flex;
+  gap: 16px;
+  white-space: nowrap;
+}
+
+.legend .unknown {
+  color: var(--muted);
+}
+
+.nearest {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.near {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  width: 100%;
+  height: 100%;
+  padding: 14px;
+  border: 1px solid var(--line);
+  background: var(--bg);
+  text-align: left;
+  transition: background-color 0.15s;
+}
+
+.near:hover {
+  background: var(--cyan-wash);
+}
+
+.nearActive {
+  border-color: var(--cyan);
+}
+
+.nearShort {
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.nearBank {
+  font-family: var(--font-display);
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.small {
+  gap: 6px;
+  font-size: 12px;
+}
+
+.small .dot {
+  width: 8px;
+  height: 8px;
+}
+
+/* ---------- reduced motion: static rings, no easing ---------- */
+@media (prefers-reduced-motion: reduce) {
+  .ping {
+    animation: none;
+    opacity: 0.4;
+  }
+
+  .pingLate {
+    display: none;
+  }
+
+  .pinDot {
+    transition: none;
+  }
+}
+
+/* ---------- below 900px: square map, card under it, 2 × 2 nearest ---------- */
+@media (max-width: 899px) {
+  .panel {
+    --radar-r: 46cqi; /* 2 km = 46% of the panel width */
+    container-type: inline-size;
+    display: flex;
+    height: auto;
+    aspect-ratio: 1;
+    /* visible overflow lets the square grow when the idle card needs more room */
+    overflow: visible;
+  }
+
+  .veil,
+  .center {
+    position: relative;
+    inset: auto;
+    flex: 1;
+  }
+
+  .card {
+    gap: 14px;
+    padding: 24px 20px;
+  }
+
+  .cardTitle {
+    font-size: 26px;
+  }
+
+  .pingBox {
+    width: 160px;
+    height: 160px;
+  }
+
+  .pingDot {
+    left: 68px;
+    top: 68px;
+  }
+
+  .area {
+    left: 10px;
+    top: 10px;
+    padding: 8px 10px;
+  }
+
+  .startOver {
+    left: 10px;
+    bottom: 10px;
+  }
+
+  .selected {
+    position: static;
+    width: auto;
+    margin-top: 12px;
+  }
+
+  .caption {
+    flex-wrap: wrap;
+    gap: 8px 16px;
+  }
+
+  .nearest {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}

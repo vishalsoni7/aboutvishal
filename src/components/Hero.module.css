@@ -65,3 +65,40 @@
 .resume {
   min-height: 48px;
 }
+
+@media (max-width: 1199px) {
+  .title {
+    font-size: 80px;
+    letter-spacing: -1.5px;
+  }
+}
+
+@media (max-width: 899px) {
+  .hero {
+    grid-template-columns: minmax(0, 1fr);
+    row-gap: 40px;
+    padding: 56px var(--pad-x) 56px;
+  }
+
+  .intro,
+  .spec {
+    grid-column: 1 / -1;
+  }
+
+  .spec {
+    align-self: stretch;
+  }
+
+  .intro {
+    gap: 24px;
+  }
+
+  .title {
+    font-size: 48px;
+    letter-spacing: -1px;
+  }
+
+  .lede {
+    font-size: 15px;
+  }
+}

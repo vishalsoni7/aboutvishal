@@ -9,13 +9,18 @@ export default function Contact() {
       <h2 id="contact-title" className={styles.title}>
         {contact.headline.map((line) => (
           <span key={line} className={styles.line}>
-            {line}
+            {line}{' '}
           </span>
         ))}
       </h2>
       <div className={styles.actions}>
-        <a href={`mailto:${contact.email}`} className={`btn btn-primary ${styles.btn}`}>
-          {contact.email}
+        <a
+          href={contact.email.href}
+          className={`btn btn-primary ${styles.btn}`}
+          aria-label={contact.email.ariaLabel}
+          title={contact.email.ariaLabel}
+        >
+          {contact.email.label}
         </a>
         {contact.links.map((link) => (
           <a

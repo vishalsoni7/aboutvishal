@@ -75,6 +75,7 @@ body {
   color: var(--ink);
   font-family: var(--font-body);
   font-weight: 400;
+  cursor: crosshair;
 }
 
 h1,
@@ -86,6 +87,7 @@ h3 {
 
 a {
   color: var(--cyan);
+  cursor: pointer;
 }
 
 a:hover {

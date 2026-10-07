@@ -1,0 +1,46 @@
+.text {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.cyan {
+  color: var(--cyan);
+}
+
+.orange {
+  color: var(--orange);
+}
+
+.title {
+  font-size: 64px;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.blurb {
+  color: var(--muted);
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+/* .text prefix: outranks the global ul[class] list reset */
+.text .points {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding-left: 20px;
+  list-style: disc;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+@media (max-width: 899px) {
+  .title {
+    font-size: 48px;
+  }
+
+  .blurb {
+    font-size: 15px;
+  }
+}

@@ -1,0 +1,151 @@
+.root {
+  position: fixed;
+  inset: 0;
+  z-index: 20;
+  overflow: hidden;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+.root[data-visible='true'] {
+  opacity: 1;
+}
+
+.lineX,
+.lineY,
+.frame,
+.readout {
+  position: absolute;
+  top: 0;
+  left: 0;
+  will-change: transform;
+}
+
+.lineX,
+.lineY {
+  background: var(--cyan);
+  opacity: 0.7;
+  transition: opacity 0.2s;
+}
+
+.lineX {
+  width: 100%;
+  height: 1px;
+}
+
+.lineY {
+  width: 1px;
+  height: 100%;
+}
+
+/* Reticle when free, lock frame over a link or button: four drafting corners + a ring */
+.frame {
+  transform-origin: center;
+}
+
+.ring {
+  position: absolute;
+  inset: 25%;
+  border: 1px solid var(--cyan);
+  border-radius: 50%;
+  transition: opacity 0.15s;
+}
+
+.frame i {
+  position: absolute;
+  width: 9px;
+  height: 9px;
+  border: 0 solid var(--cyan-soft);
+  transition:
+    border-color 0.15s,
+    width 0.15s,
+    height 0.15s;
+}
+
+.frame i:nth-of-type(1) {
+  top: 0;
+  left: 0;
+  border-top-width: 1px;
+  border-left-width: 1px;
+}
+
+.frame i:nth-of-type(2) {
+  top: 0;
+  right: 0;
+  border-top-width: 1px;
+  border-right-width: 1px;
+}
+
+.frame i:nth-of-type(3) {
+  bottom: 0;
+  left: 0;
+  border-bottom-width: 1px;
+  border-left-width: 1px;
+}
+
+.frame i:nth-of-type(4) {
+  right: 0;
+  bottom: 0;
+  border-right-width: 1px;
+  border-bottom-width: 1px;
+}
+
+.readout {
+  padding: 4px 8px;
+  background: var(--cyan);
+  color: var(--bg);
+  font-size: 11px;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+  transition: background-color 0.15s;
+}
+
+/* Locked onto a link or button */
+.root[data-locked='true'] .lineX,
+.root[data-locked='true'] .lineY {
+  opacity: 0.25;
+}
+
+.root[data-locked='true'] .ring {
+  opacity: 0;
+}
+
+.root[data-locked='true'] .frame i {
+  width: 12px;
+  height: 12px;
+  border-color: var(--orange);
+  border-width: 2px;
+}
+
+.root[data-locked='true'] .frame i:nth-of-type(1) {
+  border-right-width: 0;
+  border-bottom-width: 0;
+}
+
+.root[data-locked='true'] .frame i:nth-of-type(2) {
+  border-left-width: 0;
+  border-bottom-width: 0;
+}
+
+.root[data-locked='true'] .frame i:nth-of-type(3) {
+  border-top-width: 0;
+  border-right-width: 0;
+}
+
+.root[data-locked='true'] .frame i:nth-of-type(4) {
+  border-top-width: 0;
+  border-left-width: 0;
+}
+
+.root[data-locked='true'] .readout {
+  background: var(--orange);
+}
+
+/* Belt and braces: the component already skips rendering in these cases. */
+@media (pointer: coarse), (max-width: 899px), (prefers-reduced-motion: reduce) {
+  .root {
+    display: none;
+  }
+}

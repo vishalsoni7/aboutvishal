@@ -26,3 +26,24 @@
   min-height: 52px;
   padding: 0 24px;
 }
+
+@media (max-width: 1199px) {
+  .title {
+    font-size: 80px;
+  }
+}
+
+@media (max-width: 899px) {
+  .section {
+    padding: 64px var(--pad-x);
+    gap: 24px;
+  }
+
+  .title {
+    font-size: 52px;
+  }
+
+  .btn {
+    flex: 1 1 auto;
+  }
+}

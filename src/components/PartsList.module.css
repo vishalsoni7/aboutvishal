@@ -66,3 +66,73 @@
   font-size: 12px;
   text-align: right;
 }
+
+/* 900–1199px: description drops below the name */
+@media (max-width: 1199px) {
+  .row {
+    grid-template-columns: 70px minmax(0, 1fr) minmax(0, 260px);
+    grid-template-areas:
+      'code name stack'
+      '.    desc desc';
+    row-gap: 8px;
+  }
+
+  .code {
+    grid-area: code;
+  }
+
+  .name {
+    grid-area: name;
+  }
+
+  .desc {
+    grid-area: desc;
+  }
+
+  .stack {
+    grid-area: stack;
+  }
+}
+
+/* Below 900px: everything stacks beside the part code */
+@media (max-width: 899px) {
+  .section {
+    padding: 48px var(--pad-x);
+  }
+
+  .head {
+    flex-wrap: wrap;
+    gap: 4px 16px;
+  }
+
+  .inventory {
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+  }
+
+  .row {
+    grid-template-columns: 48px minmax(0, 1fr);
+    grid-template-areas:
+      'code name'
+      '.    desc'
+      '.    stack';
+    column-gap: 12px;
+  }
+
+  .name {
+    font-size: 22px;
+  }
+
+  .stack {
+    text-align: left;
+  }
+}
+
+@media (pointer: coarse) {
+  .inventory {
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+  }
+}

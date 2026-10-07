@@ -1,19 +1,96 @@
 .section {
+  padding: 64px var(--pad-x);
+  border-top: 1px solid var(--line);
+}
+
+.title {
+  margin-bottom: 20px;
+}
+
+.companies {
+  display: flex;
+  flex-direction: column;
+}
+
+/* One company per row: roles left, skills right */
+.company {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: var(--gap);
-  padding: 64px var(--pad-x);
+  padding: 32px 0;
   border-top: 1px solid var(--line);
+}
+
+.company:first-child {
+  padding-top: 0;
+  border-top: 0;
 }
 
 .log {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 6px;
+}
+
+.name {
+  font-size: 30px;
+  line-height: 1.15;
+}
+
+.location {
+  color: var(--muted);
+  font-size: 13px;
+}
+
+/* Roles at one company: a vertical rule joins their nodes so a promotion reads as one path */
+.section .roles {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  margin-top: 18px;
+  padding-left: 26px;
 }
 
 .role {
-  font-size: 30px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+/* Rule from this role's node down to the next role's node (none after the last) */
+.role:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  left: -22px;
+  top: 15px;
+  bottom: -28px; /* list gap (22px) + next node's top offset (6px) */
+  width: 1px;
+  background: var(--line);
+}
+
+/* Round node on the rule: hollow for past roles, filled cyan for the current one */
+.node {
+  position: absolute;
+  left: -26px;
+  top: 6px;
+  width: 9px;
+  height: 9px;
+  border: 1px solid var(--muted);
+  border-radius: 50%;
+  background: var(--bg);
+}
+
+.current .node {
+  border-color: var(--cyan);
+  background: var(--cyan);
+}
+
+.roleTitle {
+  font-family: var(--font-display);
+  font-size: 20px;
+  font-weight: 700;
 }
 
 .dates {
@@ -21,14 +98,32 @@
   font-size: 13px;
 }
 
-.summary {
+.type {
   color: var(--muted);
-  font-size: 15px;
-  line-height: 1.7;
+  font-size: 13px;
 }
 
 .materials {
   display: flex;
   flex-direction: column;
   gap: 14px;
+}
+
+@media (max-width: 899px) {
+  .section {
+    padding: 48px var(--pad-x);
+  }
+
+  .company {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 24px;
+  }
+
+  .name {
+    font-size: 24px;
+  }
+
+  .roleTitle {
+    font-size: 18px;
+  }
 }

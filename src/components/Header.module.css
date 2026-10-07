@@ -41,3 +41,38 @@
 .link:hover {
   color: var(--cyan);
 }
+
+.brandShort {
+  display: none;
+}
+
+@media (max-width: 899px) {
+  .brandFull,
+  .sheet,
+  .desktopOnly {
+    display: none;
+  }
+
+  .brandShort {
+    display: inline;
+  }
+
+  .header {
+    padding: 12px var(--pad-x);
+  }
+}
+
+@media (max-width: 899px), (pointer: coarse) {
+  .brand {
+    display: inline-flex;
+    align-items: center;
+    min-width: 44px;
+    min-height: 44px;
+  }
+
+  .link {
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+  }
+}

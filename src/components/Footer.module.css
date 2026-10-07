@@ -18,3 +18,23 @@
 .cell:last-child {
   border-right: 0;
 }
+
+/* Below 900px: 2 × 2 title block */
+@media (max-width: 899px) {
+  .footer {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .cell,
+  .cell:first-child {
+    padding: 16px var(--pad-x);
+  }
+
+  .cell:nth-child(2n) {
+    border-right: 0;
+  }
+
+  .cell:nth-child(-n + 2) {
+    border-bottom: 1px solid var(--line);
+  }
+}
