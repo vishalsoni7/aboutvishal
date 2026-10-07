@@ -31,9 +31,11 @@ const RADAR_STEPS = [1000, 2000, 5000, 10000, 20000, 50000, 100000]
 
 /**
  * Smallest radar size (1 km … 100 km) holding at least `enough` of the given distances (sorted,
- * nearest first), so one far-off ATM doesn't shrink the rest into the centre.
+ * nearest first), so one far-off ATM doesn't shrink the rest into the centre. Keep `enough`
+ * small: a town with 5 ATMs close by and the next 50 km away must stay on the 2 km scale
+ * (with 6, Bhilwara jumped to 100 km and listed ATMs in other towns).
  */
-export function radarRadius(distances: number[], enough = 6) {
+export function radarRadius(distances: number[], enough = 3) {
   const target = distances[Math.min(enough, distances.length) - 1] ?? 0
   return RADAR_STEPS.find((r) => target <= r) ?? RADAR_STEPS[RADAR_STEPS.length - 1]
 }
