@@ -5,8 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Page not found | Vishal Soni</title>
     <meta name="robots" content="noindex" />
-    <meta name="theme-color" content="#0a2540" />
-    <meta name="color-scheme" content="dark" />
+    <meta name="theme-color" content="#0a2540" media="(prefers-color-scheme: dark)" />
+    <meta name="theme-color" content="#f2efe6" media="(prefers-color-scheme: light)" />
+    <meta name="color-scheme" content="dark light" />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     <link rel="icon" href="/favicon.ico" sizes="32x32" />
     <style>
@@ -22,13 +23,38 @@
         font-display: swap;
         src: url('/fonts/ibm-plex-mono-400-latin.woff2') format('woff2');
       }
+      /* Same tokens as src/styles/tokens.css: blueprint by default, vellum on light devices */
       :root {
+        color-scheme: dark;
         --bg: #0a2540;
         --ink: #e6f1ff;
         --muted: #8fb0d4;
         --line: #244a73;
         --cyan: #7fd8ff;
         --orange: #ffb347;
+        --btn-bg: #7fd8ff;
+        --btn-ink: #0a2540;
+        --btn-hover: #c8efff;
+        --card: rgba(10, 37, 64, 0.85);
+        --grid-major: rgba(127, 216, 255, 0.09);
+        --grid-minor: rgba(127, 216, 255, 0.04);
+      }
+      @media (prefers-color-scheme: light) {
+        :root {
+          color-scheme: light;
+          --bg: #f2efe6;
+          --ink: #1d2733;
+          --muted: #5b6470;
+          --line: #d9d3c3;
+          --cyan: #1f5aa6;
+          --orange: #a3560f;
+          --btn-bg: #1d2733;
+          --btn-ink: #f7f5ef;
+          --btn-hover: #1f5aa6;
+          --card: rgba(250, 248, 242, 0.9);
+          --grid-major: rgba(31, 90, 166, 0.1);
+          --grid-minor: rgba(31, 90, 166, 0.045);
+        }
       }
       * {
         box-sizing: border-box;
@@ -41,10 +67,10 @@
         padding: 20px;
         background-color: var(--bg);
         background-image:
-          linear-gradient(rgba(127, 216, 255, 0.09) 1px, transparent 1px),
-          linear-gradient(90deg, rgba(127, 216, 255, 0.09) 1px, transparent 1px),
-          linear-gradient(rgba(127, 216, 255, 0.04) 1px, transparent 1px),
-          linear-gradient(90deg, rgba(127, 216, 255, 0.04) 1px, transparent 1px);
+          linear-gradient(var(--grid-major) 1px, transparent 1px),
+          linear-gradient(90deg, var(--grid-major) 1px, transparent 1px),
+          linear-gradient(var(--grid-minor) 1px, transparent 1px),
+          linear-gradient(90deg, var(--grid-minor) 1px, transparent 1px);
         background-size: 96px 96px, 96px 96px, 16px 16px, 16px 16px;
         color: var(--ink);
         font-family: 'IBM Plex Mono', ui-monospace, monospace;
@@ -53,7 +79,7 @@
         width: min(560px, 100%);
         padding: 40px 32px;
         border: 1px solid var(--line);
-        background: rgba(10, 37, 64, 0.85);
+        background: var(--card);
       }
       .label {
         color: var(--orange);
@@ -81,15 +107,15 @@
         min-height: 48px;
         margin-top: 28px;
         padding: 0 22px;
-        background: var(--cyan);
-        color: var(--bg);
+        background: var(--btn-bg);
+        color: var(--btn-ink);
         font-size: 13px;
         font-weight: 600;
         letter-spacing: 0.08em;
         text-decoration: none;
       }
       a:hover {
-        background: #c8efff;
+        background: var(--btn-hover);
       }
       a:focus-visible {
         outline: 2px solid var(--orange);

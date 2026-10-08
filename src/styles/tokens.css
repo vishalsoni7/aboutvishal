@@ -1,14 +1,24 @@
-/* Blueprint design tokens — source: reference/Blueprint.dc.html */
+/* Design tokens — source: reference/Blueprint.dc.html.
+ * Dark "blueprint" sheet by default; light "vellum" sheet when the device is set to light mode.
+ * Names describe the dark sheet (e.g. --cyan is the accent); the light block remaps each one to
+ * the role it plays there. Components only use these tokens, never raw colours. */
 :root {
+  color-scheme: dark;
+
   --bg: #0a2540;
   --ink: #e6f1ff;
   --muted: #8fb0d4;
   --line: #244a73;
-  --cyan: #7fd8ff;
-  --cyan-soft: #c8efff;
+  --cyan: #7fd8ff; /* accent: links, labels, crosshair, focus ring */
+  --cyan-soft: #c8efff; /* accent, emphasised (link hover, reticle corners) */
   --orange: #ffb347;
   --green: #6ff0b0;
   --slate: #6c8bb0;
+
+  /* Primary buttons */
+  --btn-bg: var(--cyan);
+  --btn-ink: var(--bg);
+  --btn-hover: var(--cyan-soft);
 
   --cyan-wash: rgba(127, 216, 255, 0.08);
   --cyan-wash-soft: rgba(127, 216, 255, 0.06);
@@ -30,6 +40,37 @@
   --status-working: var(--green);
   --status-not-working: var(--orange);
   --status-unknown: var(--slate);
+}
+
+/* Vellum: warm drafting film, graphite ink, ink-blue accent. Every text colour ≥ 4.5:1 on --bg. */
+@media (prefers-color-scheme: light) {
+  :root {
+    color-scheme: light;
+
+    --bg: #f2efe6;
+    --ink: #1d2733; /* 13.1:1 */
+    --muted: #5b6470; /* 5.2:1 */
+    --line: #d9d3c3;
+    --cyan: #1f5aa6; /* 5.9:1 */
+    --cyan-soft: #163f75; /* 9.1:1 */
+    --orange: #a3560f; /* 4.7:1 */
+    --green: #2f7a4a; /* 4.6:1 */
+    --slate: #646b78; /* 4.7:1 */
+
+    --btn-bg: #1d2733;
+    --btn-ink: #f7f5ef; /* 13.9:1 */
+    --btn-hover: #1f5aa6; /* paper text on it: 6.3:1 */
+
+    --cyan-wash: rgba(31, 90, 166, 0.07);
+    --cyan-wash-soft: rgba(31, 90, 166, 0.05);
+    --ghost-hover: rgba(31, 90, 166, 0.09);
+    --panel-bg: rgba(233, 229, 217, 0.75);
+    --panel-solid: rgba(250, 248, 242, 0.9);
+    --panel-dot: rgba(31, 90, 166, 0.28);
+    --veil: rgba(242, 239, 230, 0.6);
+    --grid-major: rgba(31, 90, 166, 0.1);
+    --grid-minor: rgba(31, 90, 166, 0.045);
+  }
 }
 
 @media (max-width: 899px) {
