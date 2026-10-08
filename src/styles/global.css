@@ -118,13 +118,13 @@ a:hover {
 }
 
 .btn-primary {
-  background: var(--cyan);
-  color: var(--bg);
+  background: var(--btn-bg);
+  color: var(--btn-ink);
 }
 
 .btn-primary:hover {
-  background: var(--cyan-soft);
-  color: var(--bg);
+  background: var(--btn-hover);
+  color: var(--btn-ink);
 }
 
 .btn-ghost {

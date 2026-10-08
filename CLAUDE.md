@@ -31,6 +31,7 @@ Starter files for `tokens.css`, `projects.ts` and `NearbyAtmsPreview.tsx` are in
 
 ## Rules
 - Match the design closely: colours only from tokens, both fonts, the 96/16 px blueprint grid background, square corners (no border-radius except on round dots and pins).
+- Two colour modes, chosen only by the device setting (no toggle): the dark "blueprint" sheet by default and a light "vellum" sheet under `@media (prefers-color-scheme: light)` in `src/styles/tokens.css`. Token names describe the dark sheet (`--cyan` is the accent in both); primary buttons use `--btn-bg` / `--btn-ink` / `--btn-hover`. Keep every text colour at 4.5:1 or better in both modes. `public/404.html` repeats the tokens inline, so change it alongside `tokens.css`. The animated favicon stays navy in both modes.
 - Semantic HTML: real `<a>` and `<button>`, one `<h1>`, section `<h2>`s, and `aria-label` on icon-only controls. Touch targets must be at least 44 px.
 - Respect `prefers-reduced-motion` (no ping animation, no crosshair easing). Hide the crosshair on touch devices (`@media (pointer: coarse)`).
 - Never ship made-up data as if it were real. Demo data must be labelled as sample data on the page.
