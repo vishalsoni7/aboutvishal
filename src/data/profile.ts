@@ -42,7 +42,7 @@ export const hero = {
   resume: {
     label: 'VIEW RÉSUMÉ ↗',
     // Opens Drive's preview in a new tab. Keep the file shared as "Anyone with the link".
-    href: 'https://drive.google.com/file/d/1_ZCKQ4gbNaDgCUSr5U0nozWly4zW7a70/view?usp=drive_link',
+    href: 'https://drive.google.com/file/d/1kn3MojBfmFzUDpoPuwjq-H4bKzGBaoyy/view?usp=drive_link',
   },
 }
 
