@@ -1,8 +1,9 @@
 import { mkdir, readFile, writeFile } from 'node:fs/promises'
 import { dirname, resolve } from 'node:path'
 import { pathToFileURL } from 'node:url'
-import { build, defineConfig, type Connect, type Plugin } from 'vite'
+import { build, defineConfig, loadEnv, type Connect, type Plugin } from 'vite'
 import react from '@vitejs/plugin-react'
+import { githubContributions } from './plugins/githubContributions.ts'
 
 // The old portfolio is a prebuilt snapshot in public/v1 (source: legacy/v1, rebuild with
 // `npm run build:v1`). Page routes under /v1 get its index.html so its client router works;
@@ -40,6 +41,7 @@ const legacyV1: Plugin = {
 // reuse the home page's <head> with their own title, description, canonical, social tags and
 // JSON-LD, all from src/data/projects.ts. CSS module class names are stable across both builds.
 const SITE = 'https://vishalsoni.netlify.app'
+const GITHUB_LOGIN = 'vishalsoni7'
 const ROOT_MARKER = '<div id="root"></div>'
 
 type PageMeta = {
@@ -118,7 +120,7 @@ const prerender: Plugin = {
       configFile: false,
       root,
       logLevel: 'warn',
-      plugins: [react()],
+      plugins: [react(), contributions],
       build: { ssr: 'src/entry-server.tsx', outDir: ssrDir, emptyOutDir: true },
     })
     const { render, flagships } = (await import(
@@ -169,6 +171,13 @@ const projectPagesDev: Plugin = {
   },
 }
 
-export default defineConfig({
-  plugins: [react(), legacyV1, projectPagesDev, prerender],
+// GitHub contribution calendar as `virtual:github-contributions`. One instance is shared with the
+// prerender's SSR build so both read the same fetch. GITHUB_TOKEN comes from .env.local or the
+// Netlify build environment; it is build-only and never reaches the client bundle.
+let contributions: Plugin
+
+export default defineConfig(({ mode }) => {
+  const { GITHUB_TOKEN } = loadEnv(mode, process.cwd(), '')
+  contributions = githubContributions(GITHUB_LOGIN, GITHUB_TOKEN || undefined)
+  return { plugins: [react(), contributions, legacyV1, projectPagesDev, prerender] }
 })

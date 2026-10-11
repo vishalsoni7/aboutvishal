@@ -46,6 +46,13 @@
   display: none;
 }
 
+/* Redline mode needs a mouse to read the page under it */
+@media (pointer: coarse) {
+  .finePointer {
+    display: none;
+  }
+}
+
 @media (max-width: 899px) {
   .brandFull,
   .sheet,
@@ -123,6 +130,10 @@
 
   .nav li:nth-child(4) {
     animation-delay: 0.61s;
+  }
+
+  .nav li:nth-child(5) {
+    animation-delay: 0.68s;
   }
 }
 

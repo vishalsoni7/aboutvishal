@@ -8,6 +8,7 @@
 
 .visual {
   grid-column: 1 / span 8;
+  align-self: start; /* hug the demo panel instead of stretching to the text column */
   min-width: 0;
 }
 

@@ -1,10 +1,11 @@
 import { header } from '../data/profile'
 import { externalProps } from '../lib/links'
+import Redlines from './Redlines'
 import styles from './Header.module.css'
 
 export default function Header() {
   return (
-    <header className={styles.header}>
+    <header className={styles.header} data-redline="Header">
       <a href="/" className={styles.brand} aria-label={header.brand}>
         <span className={styles.brandFull}>{header.brand}</span>
         <span className={styles.brandShort}>{header.brandShort}</span>
@@ -19,6 +20,9 @@ export default function Header() {
               </a>
             </li>
           ))}
+          <li className={`${styles.desktopOnly} ${styles.finePointer}`}>
+            <Redlines />
+          </li>
         </ul>
       </nav>
     </header>

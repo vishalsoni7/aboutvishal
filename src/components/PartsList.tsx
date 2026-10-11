@@ -18,7 +18,7 @@ export default function PartsList() {
           {partsList.inventory.label}
         </a>
       </div>
-      <ul className={styles.list}>
+      <ul className={styles.list} data-redline="PartsList">
         {parts.map((part) => (
           <li key={part.code}>
             <a href={part.codeUrl} className={styles.row} {...externalProps(part.codeUrl)}>

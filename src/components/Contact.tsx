@@ -6,7 +6,7 @@ export default function Contact() {
   return (
     <section id="contact" className={styles.section} aria-labelledby="contact-title">
       <p className="label label-accent">{contact.label}</p>
-      <h2 id="contact-title" className={styles.title}>
+      <h2 id="contact-title" className={styles.title} data-redline="Contact · h2">
         {contact.headline.map((line) => (
           <span key={line} className={styles.line}>
             {line}{' '}

@@ -18,7 +18,11 @@ export default function ProjectText({
   return (
     <div className={styles.text}>
       <p className={`label ${styles[accent]}`}>{project.fig}</p>
-      <Heading id={`${project.id}-title`} className={styles.title}>
+      <Heading
+        id={`${project.id}-title`}
+        className={styles.title}
+        data-redline="ProjectText · title"
+      >
         {project.name}
       </Heading>
       <p className={styles.blurb}>{project.blurb}</p>

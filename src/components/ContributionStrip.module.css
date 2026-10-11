@@ -1,0 +1,145 @@
+.block {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 32px;
+  padding-top: 32px;
+  border-top: 1px solid var(--line);
+}
+
+.head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+/* Text link with a 44px tap height */
+.profile {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  color: var(--cyan);
+  font-size: 13px;
+  text-decoration: none;
+}
+
+.profile:hover {
+  color: var(--cyan-soft);
+}
+
+.heading {
+  font-family: var(--font-display);
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+/* Panel on the sheet; scrolls sideways on narrow screens instead of shrinking the cells */
+.scroller {
+  margin-top: 8px;
+  padding: 20px;
+  overflow-x: auto;
+  border: 1px solid var(--line);
+  background: var(--panel-bg);
+}
+
+.scroller:focus-visible {
+  outline: 2px solid var(--cyan);
+  outline-offset: 2px;
+}
+
+.graph {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.axis {
+  fill: var(--muted);
+  font-family: var(--font-body);
+  font-size: 7.5px; /* viewBox units: about 12px once the graph scales to the sheet */
+}
+
+/* Level 0 is an empty outlined square; 1–4 fill with the accent at rising strength */
+.cell {
+  fill: var(--cyan);
+  stroke: var(--line);
+  stroke-width: 1;
+}
+
+.l0 {
+  fill: transparent;
+}
+
+.l1 {
+  fill-opacity: 0.28;
+  stroke: none;
+}
+
+.l2 {
+  fill-opacity: 0.5;
+  stroke: none;
+}
+
+.l3 {
+  fill-opacity: 0.75;
+  stroke: none;
+}
+
+.l4 {
+  fill-opacity: 1;
+  stroke: none;
+}
+
+.graph .on {
+  stroke: var(--cyan-soft);
+  stroke-width: 1.5;
+}
+
+.foot {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px 24px;
+  font-size: 12px;
+}
+
+.readout {
+  min-height: 1.4em;
+  color: var(--cyan);
+}
+
+.legend {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: var(--muted);
+}
+
+.swatch {
+  display: block;
+}
+
+.asOf {
+  margin-left: 14px;
+  padding-left: 14px;
+  border-left: 1px solid var(--line);
+}
+
+@media (pointer: coarse) {
+  .readout {
+    display: none;
+  }
+}
+
+@media (max-width: 899px) {
+  .heading {
+    font-size: 20px;
+  }
+
+  .scroller {
+    padding: 14px;
+  }
+}

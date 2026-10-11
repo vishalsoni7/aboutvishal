@@ -16,7 +16,7 @@ export default function DeploySection({
       className={`${styles.section} ${standalone ? styles.standalone : ''}`}
       aria-labelledby={`${project.id}-title`}
     >
-      <div className={styles.visual}>
+      <div className={styles.visual} data-redline="DeployDemo">
         <DeployDemo />
       </div>
       <div className={styles.text}>

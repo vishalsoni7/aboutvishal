@@ -3,10 +3,10 @@ import styles from './Hero.module.css'
 
 export default function Hero() {
   return (
-    <section className={styles.hero} aria-labelledby="hero-title">
+    <section className={styles.hero} aria-labelledby="hero-title" data-redline-frame>
       <div className={styles.intro}>
         <p className="label label-accent">{hero.label}</p>
-        <h1 id="hero-title" className={styles.title}>
+        <h1 id="hero-title" className={styles.title} data-redline="Hero · h1">
           {hero.headline.map((line, i) => (
             <span key={i} className={styles.line}>
               {line.map((part) =>
@@ -21,10 +21,12 @@ export default function Hero() {
             </span>
           ))}
         </h1>
-        <p className={styles.lede}>{hero.intro}</p>
+        <p className={styles.lede} data-redline="Hero · lede">
+          {hero.intro}
+        </p>
       </div>
 
-      <div className={styles.spec}>
+      <div className={styles.spec} data-redline="Hero · spec">
         <dl className={styles.specList}>
           {hero.spec.map((row) => (
             <div key={row.label} className={styles.specRow}>
@@ -36,6 +38,7 @@ export default function Hero() {
         <a
           href={hero.resume.href}
           className={`btn btn-primary ${styles.resume}`}
+          data-redline=".btn-primary"
           target="_blank"
           rel="noreferrer"
         >
