@@ -20,6 +20,10 @@
   font-size: 13px;
 }
 
+.actions {
+  display: flex;
+}
+
 /* Below 1200px: one column, demo first (already first in the DOM) */
 @media (max-width: 1199px) {
   .section {
@@ -30,6 +34,11 @@
   .text,
   .visual {
     grid-column: 1 / -1;
+  }
+
+  /* On the project's own page, its name (the h1) comes first */
+  .standalone .text {
+    order: -2;
   }
 }
 

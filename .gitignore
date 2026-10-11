@@ -20,3 +20,6 @@ npm-debug.log*
 *.local
 .vscode/*
 !.vscode/extensions.json
+
+# /brag launch videos
+brag-output*/

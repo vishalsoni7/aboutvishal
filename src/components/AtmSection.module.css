@@ -36,6 +36,11 @@
   .visual {
     order: -1;
   }
+
+  /* On the project's own page, its name (the h1) comes first */
+  .standalone .text {
+    order: -2;
+  }
 }
 
 @media (max-width: 899px) {

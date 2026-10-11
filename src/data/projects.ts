@@ -12,6 +12,8 @@ export interface Flagship {
   codeUrl?: string
   liveUrl?: string
   note?: string
+  // Its own page at /projects/<slug>/ (see projects/<slug>/index.html for the head tags)
+  page: { path: string; title: string; description: string }
 }
 
 export const flagships: Flagship[] = [
@@ -29,12 +31,19 @@ export const flagships: Flagship[] = [
     stack: ['React', 'TypeScript', 'Vite', 'Leaflet', 'Supabase', 'PostGIS'],
     codeUrl: `${GH}/atm-status`,
     liveUrl: ATM_APP_URL,
+
+    page: {
+      path: '/projects/atm-status/',
+      title: 'ATM Status — find a working ATM near you | Vishal Soni',
+      description:
+        'ATM Status tells people whether a nearby ATM is working before they walk there. Try the live demo, built by Vishal Soni with React, TypeScript and Supabase.',
+    },
   },
   {
     id: 'deploy',
     fig: 'FIG. 02 — DEV TOOLING · 2026',
     name: 'Deploy Tracker',
-    // TODO(Vishal): verify blurb, points and stack — written without access to the private repo
+    // Stack from the deploy-tracker README: Python stdlib, git, GitHub (gh CLI / Actions) and Jira.
     blurb:
       'For teams that merge to staging but ship to production by cherry-picking. Shows every merged branch and which ones still haven’t reached production, so release day is a checklist, not guesswork.',
     points: [
@@ -42,8 +51,15 @@ export const flagships: Flagship[] = [
       'Flags what still needs cherry-picking to production',
       'One view to check before every release',
     ],
-    stack: ['React', 'TypeScript', 'GitHub API'],
+    stack: ['Python', 'GitHub API', 'Jira API'],
     note: 'PRIVATE REPO · DEMO ON REQUEST',
+
+    page: {
+      path: '/projects/deploy-tracker/',
+      title: 'Deploy Tracker — merged but not in production | Vishal Soni',
+      description:
+        'Deploy Tracker shows which merged branches have not reached production yet, for teams that release by cherry-picking. Try the demo, built by Vishal Soni.',
+    },
   },
 ]
 
@@ -113,7 +129,9 @@ export const pilotPins = [
 
 export const GITHUB_URL = GH
 
-export const projectCta = { code: 'CODE ↗', live: 'TRY THE PILOT ↗' }
+export const projectCta = { code: 'CODE ↗', live: 'TRY THE PILOT ↗', page: 'PROJECT PAGE →' }
+
+export const projectPage = { back: '← BACK TO THE FULL SHEET' }
 
 // Copy for the nearby-ATM demo (NearbyAtmsPreview).
 export const atmDemo = {

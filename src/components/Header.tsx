@@ -5,7 +5,7 @@ import styles from './Header.module.css'
 export default function Header() {
   return (
     <header className={styles.header}>
-      <a href="#top" className={styles.brand} aria-label={header.brand}>
+      <a href="/" className={styles.brand} aria-label={header.brand}>
         <span className={styles.brandFull}>{header.brand}</span>
         <span className={styles.brandShort}>{header.brandShort}</span>
       </a>
