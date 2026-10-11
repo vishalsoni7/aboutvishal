@@ -2,7 +2,7 @@
 import { GITHUB_URL } from './projects'
 import { skills } from './skills'
 
-export const LINKEDIN_URL = 'https://www.linkedin.com/in/vishal-soni-b21a4a1b8' // from the v1 site — verify
+export const LINKEDIN_URL = 'https://www.linkedin.com/in/vishal-soni07'
 export const EMAIL = 'vishsoni043@gmail.com'
 
 export interface NavLink {
@@ -17,15 +17,15 @@ export const header = {
   brandShort: 'VS',
   sheet: 'SHEET 01 OF 01 · REV 2026.09',
   nav: [
-    { label: '01 ATM', href: '#atm' },
-    { label: '02 DEPLOY', href: '#deploy' },
-    { label: 'CONTACT', href: '#contact' },
+    { label: '01 ATM', href: '/#atm' },
+    { label: '02 DEPLOY', href: '/#deploy' },
+    { label: 'CONTACT', href: '/#contact' },
     { label: 'GITHUB ↗', href: GITHUB_URL, external: true, mobile: true },
   ] satisfies NavLink[],
 }
 
 export const hero = {
-  label: '[ SPEC ] FRONTEND DEVELOPER · RAJASTHAN, IN · OPEN TO REMOTE',
+  label: '[ SPEC ] SOFTWARE ENGINEER · RAJASTHAN, IN · OPEN TO REMOTE',
   // Each entry is one line of the h1; `accent` words render in cyan.
   headline: [
     [{ text: 'Vishal Soni' }],
@@ -42,7 +42,8 @@ export const hero = {
   resume: {
     label: 'VIEW RÉSUMÉ ↗',
     // Opens Drive's preview in a new tab. Keep the file shared as "Anyone with the link".
-    href: 'https://drive.google.com/file/d/1kn3MojBfmFzUDpoPuwjq-H4bKzGBaoyy/view?usp=drive_link',
+    // Served from public/resume.pdf so it's on our own domain. Replace that file to update it.
+    href: '/resume.pdf',
   },
 }
 

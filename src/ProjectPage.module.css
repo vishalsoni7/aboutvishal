@@ -1,0 +1,13 @@
+.back {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  margin: 24px var(--pad-x) 0;
+  color: var(--muted);
+  text-decoration: none;
+}
+
+.back:hover,
+.back:focus-visible {
+  color: var(--cyan);
+}

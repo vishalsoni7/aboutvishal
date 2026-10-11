@@ -4,11 +4,21 @@ import NearbyAtmsPreview from './NearbyAtmsPreview'
 import ProjectText from './ProjectText'
 import styles from './AtmSection.module.css'
 
-export default function AtmSection({ project }: { project: Flagship }) {
+export default function AtmSection({
+  project,
+  standalone = false,
+}: {
+  project: Flagship
+  standalone?: boolean // on its own page: h1 title, no link to itself
+}) {
   return (
-    <section id={project.id} className={styles.section} aria-labelledby={`${project.id}-title`}>
+    <section
+      id={project.id}
+      className={`${styles.section} ${standalone ? styles.standalone : ''}`}
+      aria-labelledby={`${project.id}-title`}
+    >
       <div className={styles.text}>
-        <ProjectText project={project}>
+        <ProjectText project={project} heading={standalone ? 'h1' : 'h2'}>
           <div className={styles.actions}>
             {project.codeUrl && (
               <a
@@ -26,6 +36,11 @@ export default function AtmSection({ project }: { project: Flagship }) {
                 {...externalProps(project.liveUrl)}
               >
                 {projectCta.live}
+              </a>
+            )}
+            {!standalone && (
+              <a href={project.page.path} className="btn btn-ghost">
+                {projectCta.page}
               </a>
             )}
           </div>
