@@ -16,6 +16,7 @@ export default function AtmSection({
       id={project.id}
       className={`${styles.section} ${standalone ? styles.standalone : ''}`}
       aria-labelledby={`${project.id}-title`}
+      data-redline-frame
     >
       <div className={styles.text}>
         <ProjectText project={project} heading={standalone ? 'h1' : 'h2'}>
@@ -46,7 +47,7 @@ export default function AtmSection({
           </div>
         </ProjectText>
       </div>
-      <div className={styles.visual}>
+      <div className={styles.visual} data-redline="NearbyAtmsPreview">
         <NearbyAtmsPreview />
       </div>
     </section>

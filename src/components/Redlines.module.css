@@ -1,0 +1,189 @@
+/* Redline mode: marks drawn in --orange, the drafting "redline" colour on both sheets */
+
+/* Header toggle, styled like the nav links */
+.toggle {
+  display: inline-block;
+  padding: 10px 0;
+  border: 0;
+  background: none;
+  color: var(--ink);
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.toggle:hover {
+  color: var(--orange);
+}
+
+.toggle[aria-pressed='true'] {
+  color: var(--orange);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+/* Overlay covering the whole document; marks use page coordinates */
+.layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 30;
+  width: 100%;
+  overflow: hidden;
+  pointer-events: none;
+  color: var(--orange);
+  font-family: var(--font-body);
+  font-size: 11px;
+  line-height: 1;
+}
+
+.mark {
+  position: absolute;
+  outline: 1px dashed var(--orange);
+  outline-offset: 2px;
+}
+
+.tag {
+  position: absolute;
+  bottom: calc(100% + 5px);
+  left: -3px;
+  padding: 3px 6px;
+  border: 1px solid var(--orange);
+  background: var(--panel-solid);
+  white-space: nowrap;
+}
+
+.tag b {
+  font-weight: 600;
+}
+
+/* No room above (the header, under the ruler): tuck the tag into the bottom-right corner */
+.inside {
+  bottom: 4px;
+  left: auto;
+  right: 4px;
+}
+
+/* Dimension line with end ticks and the measurement on a paper chip */
+.dim {
+  position: absolute;
+  height: 0;
+  border-top: 1px solid var(--orange);
+}
+
+.dim::before,
+.dim::after {
+  content: '';
+  position: absolute;
+  top: -5px;
+  width: 1px;
+  height: 9px;
+  background: var(--orange);
+}
+
+.dim::before {
+  left: 0;
+}
+
+.dim::after {
+  right: 0;
+}
+
+.vertical {
+  width: 0;
+  height: auto;
+  border-top: 0;
+  border-left: 1px solid var(--orange);
+}
+
+.vertical::before,
+.vertical::after {
+  top: auto;
+  left: -5px;
+  width: 9px;
+  height: 1px;
+}
+
+.vertical::before {
+  top: 0;
+}
+
+.vertical::after {
+  right: auto;
+  bottom: 0;
+}
+
+.dimLabel {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  padding: 2px 4px;
+  background: var(--bg);
+  transform: translate(-50%, -50%);
+}
+
+.vertical .dimLabel {
+  top: 50%;
+  left: 0;
+}
+
+/* Fixed ruler on the top edge: minor ticks every 16px, labelled majors every 96px */
+.ruler {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 31;
+  height: 18px;
+  border-bottom: 1px solid var(--orange);
+  background:
+    linear-gradient(90deg, var(--orange) 1px, transparent 1px) 0 100% / 16px 5px repeat-x,
+    var(--panel-solid);
+  pointer-events: none;
+}
+
+.major {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  padding: 3px 0 0 4px;
+  border-left: 1px solid var(--orange);
+  color: var(--orange);
+  font-family: var(--font-body);
+  font-size: 10px;
+  line-height: 1;
+}
+
+.legend {
+  position: fixed;
+  left: 16px;
+  bottom: 16px;
+  z-index: 31;
+  padding: 8px 12px;
+  border: 1px solid var(--orange);
+  background: var(--panel-solid);
+  color: var(--orange);
+  font-size: 12px;
+  pointer-events: none;
+}
+
+.legend span {
+  margin-left: 10px;
+  color: var(--muted);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .mark,
+  .dim {
+    animation: redline-in 0.35s ease-out both;
+  }
+
+  .ruler {
+    animation: redline-in 0.2s ease-out both;
+  }
+}
+
+@keyframes redline-in {
+  from {
+    opacity: 0;
+  }
+}

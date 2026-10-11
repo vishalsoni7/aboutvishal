@@ -9,3 +9,8 @@ interface ImportMetaEnv {
 interface ImportMeta {
   readonly env: ImportMetaEnv
 }
+
+declare module 'virtual:github-contributions' {
+  const data: import('../plugins/githubContributions').Contributions | null
+  export default data
+}

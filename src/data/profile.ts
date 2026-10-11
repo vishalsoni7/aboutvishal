@@ -100,6 +100,23 @@ export const about = {
   experience,
 }
 
+// GitHub contribution graph under the Operator Log (ContributionStrip.tsx). Real data, fetched
+// at build time; the block is left out when the fetch fails.
+export const activity = {
+  title: 'ACTIVITY TRACE — GITHUB',
+  heading: (total: number) =>
+    `${total.toLocaleString('en-US')} contributions in the last 12 months`,
+  asOf: (date: string) => `AS OF ${date}`,
+  months: ['JAN', 'FEB', 'MAR', 'APR', 'MAY', 'JUN', 'JUL', 'AUG', 'SEP', 'OCT', 'NOV', 'DEC'],
+  weekdays: ['', 'MON', '', 'WED', '', 'FRI', ''],
+  idle: 'HOVER A CELL TO READ IT',
+  cell: (count: number, date: string) =>
+    `${date} · ${count === 0 ? 'NO' : count} CONTRIBUTION${count === 1 ? '' : 'S'}`,
+  less: 'LESS',
+  more: 'MORE',
+  profile: { label: 'PROFILE ↗', href: GITHUB_URL },
+}
+
 export const contact = {
   label: '[ END OF SHEET ] — REQUEST FOR COLLABORATION',
   headline: ['Let’s draft', 'the next build.'],
@@ -111,6 +128,13 @@ export const contact = {
 }
 
 export const footer = ['DRAWN BY: V. SONI', 'LOCATION: RAJASTHAN, IN', 'SCALE: 1:1', '© 2026']
+
+// Redline mode (Redlines.tsx): header toggle and the legend shown while it's on.
+export const redlines = {
+  toggle: 'REDLINES',
+  legend: 'REDLINE MODE · MEASURED LIVE FROM THE DOM',
+  close: 'ESC TO CLOSE',
+}
 
 // Crosshair readout labels (Crosshair.tsx).
 export const crosshair = { lock: 'LOCK', link: 'LINK', button: 'BUTTON' }

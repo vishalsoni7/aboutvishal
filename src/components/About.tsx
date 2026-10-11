@@ -1,4 +1,6 @@
 import { about } from '../data/profile'
+// GitHub activity graph, parked until private contributions show publicly (or GITHUB_TOKEN is set).
+// import ContributionStrip from './ContributionStrip'
 import styles from './About.module.css'
 
 // One row per company: its roles on the left (a timeline when there's more than one),
@@ -13,7 +15,9 @@ export default function About() {
         {about.experience.map((company) => (
           <li key={company.name} className={styles.company}>
             <div className={styles.log}>
-              <h3 className={styles.name}>{company.name}</h3>
+              <h3 className={styles.name} data-redline="About · company">
+                {company.name}
+              </h3>
               <p className={styles.location}>{company.location}</p>
               <ol className={styles.roles}>
                 {company.roles.map((role) => (
@@ -42,6 +46,7 @@ export default function About() {
           </li>
         ))}
       </ol>
+      {/* <ContributionStrip /> */}
     </section>
   )
 }
